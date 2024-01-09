@@ -1,50 +1,36 @@
 ---
 interface navProps {
-    href: string;
-    tittle: string;
+  href: string;
 }
 
-const { href, tittle } = Astro.props;
+const { href } = Astro.props;
 ---
 
-<nav>
-    <ul>
-        <li><a href={href}>Start</a></li>
-        <li><a href={href}>Experience</a></li>
-        <li><a href={href}>Projects</a></li>
-        <li><a href={href}>Skills</a></li>
-    </ul>
-</nav>
-
-<style>
-    nav {
-        display: flex;
-        justify-content: space-evenly;
-        background: transparent;
-        max-width: 70%;
-        padding: 1rem;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 0 1rem;
-    }
-
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-    }
-
-    nav ul li a:hover {
-        color: rgb(250, 229, 232);
-        padding-bottom: 3px;
-        border-bottom: 2px solid white;
-    }
-</style>
+<div class="flex justify-center items-center pt-10 sm:h-52 sticky">
+  <ul class="flex justify-center max-w-md">
+    <li>
+      <a
+        class="text-white px-0 sm:px-8 md:px-16 xl:px-16 hover:text-rose-300 text-xl"
+        href={href}>Start</a
+      >
+    </li>
+    <li>
+      <a
+        class="text-white px-0 sm:px-8 md:px-16 xl:px-16 hover:text-rose-300 text-xl"
+        href={href}>Experience</a
+      >
+    </li>
+    <li>
+      <a
+        class="text-white px-0 sm:px-8 md:px-16 xl:px-16 hover:text-rose-300 text-xl"
+        href={href}>Projects</a
+      >
+    </li>
+    <li>
+      <a
+        class="text-white px-0 sm:px-8 md:px-16 xl:px-16 hover:text-rose-300 text-xl"
+        href={href}>Skills</a
+      >
+    </li>
+  </ul>
+</div>
