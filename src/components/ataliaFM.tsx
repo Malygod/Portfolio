@@ -1,4 +1,10 @@
-import React from "react";
+import React from "react"
+import img1 from "../img/sideNavegation.png"
+import img2 from "../img/propiedades.png"
+import img3 from "../img/mobileLogin.png"
+import img4 from "../img/agendarVisita.png"
+import img5 from "../img/mobileFooter.png"
+
 
 export const AtaliaMF = () => {
     return (
@@ -6,27 +12,27 @@ export const AtaliaMF = () => {
             <img
                 className="transform w-[210px] h-[453px] self-center blur-md hover:scale-125 border-4 rounded-xl hover:border-teal-950 hover:blur-0 transition-all duration-300 ease-in-out"
                 alt="Agendarvisita"
-                src="../src/img/sideNavegation.png"
+                src= {img1.src}
             />
             <img
                 className="transform w-[210px] h-[453px] self-center blur-md hover:scale-125 border-4 rounded-xl hover:border-teal-950 hover:blur-0 transition-all duration-300 ease-in-out"
                 alt="Agendarvisita"
-                src="../src/img/propiedades.png"
+                src= {img2.src}
             />
             <img
                 className="transform w-[210px] h-[453px] self-center blur-md hover:scale-125 border-4 rounded-xl hover:border-teal-950 hover:blur-0 transition-all duration-300 ease-in-out"
                 alt="Agendarvisita"
-                src="../src/img/mobileLogin.png"
+                src= {img3.src}
             />
             <img
                 className="transform w-[210px] h-[453px] self-center blur-md hover:scale-125 border-4 rounded-xl hover:border-teal-950 hover:blur-0 transition-all duration-300 ease-in-out"
                 alt="Agendarvisita"
-                src="../src/img/agendarVisita.png"
+                src= {img4.src}
             />
             <img
                 className="transform w-[210px] h-[453px] self-center blur-md hover:scale-125 border-4 rounded-xl hover:border-teal-950 hover:blur-0 transition-all duration-300 ease-in-out"
                 alt="Agendarvisita"
-                src="../src/img/mobileFooter.png"
+                src= {img5.src}
             />
         </div>
     );
