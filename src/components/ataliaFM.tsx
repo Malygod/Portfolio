@@ -12,7 +12,7 @@ const images = [img1, img2, img3, img4, img5];
 
 export const AtaliaMF = () => {
   return (
-    <div className="overflow-hidden w-full max-w-full flex justify-evenly items-center h-[600px]">
+    <div className="overflow-hidden w-full max-w-full flex justify-evenly items-center h-[650px]">
       <img
         className="transform w-[105px] hover:scale-125 border-2 rounded-xl blur-sm hover:border-teal-700 hover:blur-0 transition-all duration-300 ease-in-out"
         alt="Agendarvisita"
