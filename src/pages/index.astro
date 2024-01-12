@@ -5,6 +5,7 @@ import Foto from "../img/yo.jpg";
 import Atalia from "../img/ataliaLogo.png";
 import { AtaliaMF } from "../components/ataliaFM";
 import Forest from "../components/bgForest";
+import Chile from "../img/chilexd.png";
 ---
 
 <Layout title="Portfolio">
@@ -20,18 +21,26 @@ import Forest from "../components/bgForest";
         />
       </a>
     </div>
+    <Image
+      src={Chile}
+      alt="Country"
+      class="absolute w-10 h-auto top-[430px] rounded-sm"
+    />
+  </div>
+  <div class="flex justify-center pt-36">
+    <h1 class="text-white text-center text-3xl">Matías Sepúlveda</h1>
   </div>
   <div class="flex justify-center pt-16">
-    <h1 class="text-white text-center text-2xl">Matías Sepúlveda</h1>
-  </div>
-  <div class="flex justify-center pt-16">
-    <h1 class="text-white text-center text-4xl sm:text-5xl md:text-7xl">
+    <h1 class="text-white text-center text-5xl md:text-7xl">
       Software Engineer
     </h1>
   </div>
   <div class="flex justify-center pt-16">
-    <h1 class="text-white text-center text-2xl max-w-96">
-      I have a strong passion for design aesthetic focused interfaces
+    <h1
+      class="text-white text-center text-xl xl:text-2xl px-5 sm:px-0 max-w-[490px]"
+    >
+      Passionate about crafting visually appealing interfaces and designing new
+      software solutions to meet user needs.
     </h1>
   </div>
   <div class="flex justify-center items-center pt-20">
@@ -60,14 +69,17 @@ import Forest from "../components/bgForest";
       >
     </div>
   </div>
-  <div class=" py-[50px] 2xl:py-[100px]">
+  <div class="pt-96">
+
+  </div>
+  <div class="py-[50px] 2xl:py-[100px]">
     <Forest />
   </div>
   <div class="grid xl:flex xl:px-[5%] 2xl:px-[15%]">
     <div
       class="pt-0 justify-center xl:pt-16 w-full sm:w-full md:w-full lg:w-full xl:w-1/3"
     >
-      <div class="flex justify-center xl:block">
+      <div class="hidden xl:bg-black justify-center xl:block">
         <div
           class="flex justify-center items-center w-28 h-28 overflow-hidden rounded-full antialiased"
         >
@@ -80,14 +92,19 @@ import Forest from "../components/bgForest";
           </a>
         </div>
       </div>
-      <div class="py-10">
-        <h1 class="text-white text-center xl:text-left text-2xl xl:text-4xl">
+      <div class="py-5">
+        <h1 class="text-white text-center xl:text-left text-3xl xl:text-4xl">
           Junior Software Engineer
         </h1>
       </div>
       <div class="w-full">
-        <h1 class="text-white text-center xl:text-left text-xl">
-          Junior Software Engineer
+        <h1
+          class="px-[10%] lg:px-[20%] xl:px-0 text-white text-center xl:text-left text-md"
+        >
+          Revolutionized real estate operations at Inmobiliaria Atalia Limitada
+          from Sept 2021 to Mar 2023 by designing, developing from, and
+          implementing a web platform from zero. Enhanced efficiency with
+          multiple functionalities for both staff and clients.
         </h1>
       </div>
     </div>
