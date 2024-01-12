@@ -1,9 +1,11 @@
+import img from "../img/bosqueDifuso.jpg";
+
 export const Forest = () => {
     return (
         <div
             className="flex bg-white h-[120px] w-full blur-[2px]"
             style={{
-                backgroundImage: "url('../src/img/bosqueDifuso.jpg')",
+                backgroundImage: `url(${img.src})`,  // Use the specific property that contains the image URL
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed',
