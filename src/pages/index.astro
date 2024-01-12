@@ -60,25 +60,42 @@ import Forest from "../components/bgForest";
       >
     </div>
   </div>
-
-  <div class="flex justify-center pt-[350px] ">
-    <div class="w-36 h-36 overflow-hidden rounded-full antialiased">
-      <a href="/">
-        <Image
-          src={Atalia}
-          alt="Foto de perfil"
-          class="w-full h-auto rounded-full"
-        />
-      </a>
+  <div class=" py-[50px] 2xl:py-[100px]">
+    <Forest />
+  </div>
+  <div class="grid xl:flex xl:px-[5%] 2xl:px-[15%]">
+    <div
+      class="pt-0 justify-center xl:pt-16 w-full sm:w-full md:w-full lg:w-full xl:w-1/3"
+    >
+      <div class="flex justify-center xl:block">
+        <div
+          class="flex justify-center items-center w-28 h-28 overflow-hidden rounded-full antialiased"
+        >
+          <a href="https://www.linkedin.com/in/matias-sepúlveda-1914152a7">
+            <Image
+              src={Atalia}
+              alt="Foto de perfil"
+              class="w-full h-auto rounded-full"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="py-10">
+        <h1 class="text-white text-center xl:text-left text-2xl xl:text-4xl">
+          Junior Software Engineer
+        </h1>
+      </div>
+      <div class="w-full">
+        <h1 class="text-white text-center xl:text-left text-xl">
+          Junior Software Engineer
+        </h1>
+      </div>
+    </div>
+    <div class="w-full xl:flex">
+      <AtaliaMF />
     </div>
   </div>
-  <div class="flex justify-center">
-    <h1 class="text-white text-center text-2xl max-w-[300px] py-10">
-      Junior Software Engineer
-    </h1>
+  <div class="py-[50px] 2xl:py-[100px]">
+    <Forest />
   </div>
-  <Forest />
-  <AtaliaMF />
-
-  <div class="h-[300px] "></div>
 </Layout>
