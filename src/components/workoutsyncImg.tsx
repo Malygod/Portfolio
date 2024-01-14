@@ -11,7 +11,7 @@ import img5 from "../img/dataformWS.jpg"
 
 export const WorkoutsyncImg = () => {
   return (
-    <div className="overflow-hidden w-full max-w-full flex justify-evenly items-center h-[650px]">
+    <div className="overflow-hidden h-[580px] w-full max-w-full flex justify-evenly items-center xl:h-[650px]">
       <img
         className="transform w-[105px] hover:scale-125 border-2 rounded-xl blur-sm hover:border-rose-800 hover:blur-0 transition-all duration-300 ease-in-out"
         alt="Agendarvisita"
