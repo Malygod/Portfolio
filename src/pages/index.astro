@@ -5,7 +5,10 @@ import Foto from "../img/yo.jpg";
 import Atalia from "../img/ataliaLogo.png";
 import { AtaliaMF } from "../components/ataliaFM";
 import Forest from "../components/bgForest";
+import Red from "../components/bgSport";
 import Chile from "../img/chilexd.png";
+import WorkoutSync from "../img/logoGrisNegro.jpg";
+import { WorkoutsyncImg } from "../components/workoutsyncImg";
 ---
 
 <Layout title="Portfolio">
@@ -24,14 +27,14 @@ import Chile from "../img/chilexd.png";
     <Image
       src={Chile}
       alt="Country"
-      class="absolute w-10 h-auto top-[430px] rounded-sm"
+      class="absolute w-10 h-auto top-[325px] sm:top-[425px] rounded-sm"
     />
   </div>
   <div class="flex justify-center pt-36">
     <h1 class="text-white text-center text-3xl">Matías Sepúlveda</h1>
   </div>
   <div class="flex justify-center pt-16">
-    <h1 class="text-white text-center text-5xl md:text-7xl">
+    <h1 class="text-white text-center text-4xl md:text-7xl">
       Software Engineer
     </h1>
   </div>
@@ -69,9 +72,7 @@ import Chile from "../img/chilexd.png";
       >
     </div>
   </div>
-  <div class="pt-96">
-
-  </div>
+  <div class="pt-56"></div>
   <div class="pt-[100px]">
     <Forest />
   </div>
@@ -99,12 +100,12 @@ import Chile from "../img/chilexd.png";
       </div>
       <div class="w-full">
         <h1
-          class="px-[10%] lg:px-[20%] xl:px-0 text-white text-center xl:text-left text-md xl:max-w-[500px] "
+          class="px-[10%] lg:px-[20%] xl:px-0 text-white text-center xl:text-left text-md xl:max-w-[500px]"
         >
           Revolutionized real estate operations at Inmobiliaria Atalia Limitada
-          from Sept 2021 to Mar 2023 by designing, developing and
-          implementing a web platform from zero. Enhanced efficiency with
-          multiple functionalities for both staff and clients.
+          from Sept 2021 to Mar 2023 by designing, developing and implementing a
+          web platform from zero. Enhanced efficiency with multiple
+          functionalities for both staff and clients.
         </h1>
       </div>
     </div>
@@ -114,5 +115,50 @@ import Chile from "../img/chilexd.png";
   </div>
   <div class="pb-[200px]">
     <Forest />
+  </div>
+  <div class="pt-[100px]">
+    <Red />
+  </div>
+  <div class="grid xl:flex xl:px-[5%] 2xl:px-[10%]">
+    <div
+      class="justify-center xl:pt-24 w-full sm:w-full md:w-full lg:w-full xl:w-2/4"
+    >
+      <div class="hidden xl:bg-black justify-center xl:block">
+        <div
+          class="flex justify-center items-center w-32 h-auto overflow-hidden rounded-full antialiased"
+        >
+          <a href="https://www.linkedin.com/in/matias-sepúlveda-1914152a7">
+            <Image
+              src={WorkoutSync}
+              alt="Foto de perfil"
+              class="w-full h-auto rounded-full"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="py-5">
+        <h1 class="text-white text-center xl:text-left text-3xl xl:text-4xl">
+          Workout Journey Project
+        </h1>
+      </div>
+      <div class="w-full">
+        <h1
+          class="px-[10%] lg:px-[20%] xl:px-0 text-white text-center xl:text-left text-md xl:max-w-[500px]"
+        >
+          This personal project aims to redefine the individual experience of
+          physical activity by providing streamlined access to initiate a
+          personal sports journey. The ultimate goal is to empower users with
+          tools to enhance their quality of life through their chosen physical
+          activity, fostering a positive and lasting impact on personal
+          well-being.
+        </h1>
+      </div>
+    </div>
+    <div class="w-full xl:flex">
+      <WorkoutsyncImg />
+    </div>
+  </div>
+  <div class="pb-[200px]">
+    <Red />
   </div>
 </Layout>
