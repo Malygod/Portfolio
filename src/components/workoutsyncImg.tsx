@@ -18,7 +18,7 @@ export const WorkoutsyncImg = () => {
         src={img1.src}
       />
       <img
-        className="transform w-[140px] h-auto hover:scale-125 border-2 rounded-xl blur-sm hover:border-rose-800 hover:blur-0 transition-all duration-300 ease-in-out"
+        className="transform w-[150px] h-auto hover:scale-125 border-2 rounded-xl blur-sm hover:border-rose-800 hover:blur-0 transition-all duration-300 ease-in-out"
         alt="Agendarvisita"
         src={img2.src}
       />
@@ -28,7 +28,7 @@ export const WorkoutsyncImg = () => {
         src={img3.src}
       />
       <img
-        className="transform w-[140px] h-auto hover:scale-125 border-2 rounded-xl blur-sm z-20 hover:border-rose-800 hover:blur-0 transition-all duration-300 ease-in-out"
+        className="transform w-[150px] h-auto hover:scale-125 border-2 rounded-xl blur-sm z-20 hover:border-rose-800 hover:blur-0 transition-all duration-300 ease-in-out"
         alt="Agendarvisita"
         src={img4.src}
       />
