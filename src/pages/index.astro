@@ -7,8 +7,10 @@ import { AtaliaMF } from "../components/ataliaFM";
 import Forest from "../components/bgForest";
 import Red from "../components/bgSport";
 import Chile from "../img/chilexd.png";
+import arrow from "../img/arrowDown.jpg";
 import WorkoutSync from "../img/logoGrisNegro.jpg";
 import { WorkoutsyncImg } from "../components/workoutsyncImg";
+import AtaliaExtra from "../components/ataliaExtra";
 ---
 
 <Layout title="Portfolio">
@@ -31,7 +33,9 @@ import { WorkoutsyncImg } from "../components/workoutsyncImg";
     />
   </div>
   <div class="flex justify-center pt-36">
-    <h1 class="text-white text-center text-3xl">Matías Sepúlveda</h1>
+    <h1 class="text-white text-center text-2xl xl:text-3xl">
+      Matías Sepúlveda
+    </h1>
   </div>
   <div class="flex justify-center pt-16">
     <h1 class="text-white text-center text-4xl md:text-7xl">
@@ -52,7 +56,7 @@ import { WorkoutsyncImg } from "../components/workoutsyncImg";
         href="https://github.com/malygod"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex"
+        class="inline-flex animate-pulse"
         aria-label="GitHub"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +80,7 @@ import { WorkoutsyncImg } from "../components/workoutsyncImg";
   <div class="pt-[100px]">
     <Forest />
   </div>
-  <div class="grid xl:flex xl:px-[5%] 2xl:px-[10%]">
+  <div class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10">
     <div
       class="pt-10 justify-center xl:pt-32 w-full sm:w-full md:w-full lg:w-full xl:w-2/4"
     >
@@ -115,6 +119,21 @@ import { WorkoutsyncImg } from "../components/workoutsyncImg";
   </div>
   <div class="pb-[200px]">
     <Forest />
+    <div class="flex justify-center mt-[-50px] z-50">
+      <button>
+        <details>
+          <summary class="flex pt-5 text-black animate-bounce justify-center"
+            ><Image
+              src={arrow}
+              alt="flecha"
+              class="w-10 h-auto"
+              id="arrow"
+            /></summary
+          >
+          <AtaliaExtra />
+        </details>
+      </button>
+    </div>
   </div>
   <div class="pt-[100px]">
     <Red />
@@ -160,5 +179,20 @@ import { WorkoutsyncImg } from "../components/workoutsyncImg";
   </div>
   <div class="pb-[200px]">
     <Red />
+    <div class="flex justify-center mt-[-50px] z-50">
+      <button>
+        <details>
+          <summary class="flex pt-5 text-black animate-bounce justify-center"
+            ><Image
+              src={arrow}
+              alt="flecha"
+              class="w-10 h-auto"
+              id="arrow"
+            /></summary
+          >
+          
+        </details>
+      </button>
+    </div>
   </div>
 </Layout>
