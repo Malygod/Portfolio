@@ -7,32 +7,24 @@ import img5 from "../img/mobileFooter.png"
 
 export const AtaliaMF = () => {
   return (
-    <div className="overflow-hidden h-[580px] w-full max-w-full flex justify-evenly items-center xl:h-[650px] z-10">
+    <div className="h-[580px] w-full max-w-full flex justify-center items-center xl:h-[650px] z-50">
+
       <img
-        className="transform w-[105px] hover:scale-125 border-2 rounded-xl blur-sm hover:border-teal-700 hover:blur-0 transition-all duration-300 ease-in-out cursor-pointer"
-        alt="Agendarvisita"
-        src={img1.src}
-      />
-      <img
-        className="transform w-[150px] h-auto hover:scale-125 border-2 rounded-xl blur-sm hover:border-teal-700 hover:blur-0 transition-all duration-300 ease-in-out cursor-pointer"
+        className="transform w-[250px] mt-10 h-auto -rotate-6 hover:scale-110 rounded-lg z-20 opacity-90 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer shadow-black drop-shadow-xl shadow-2xl"
         alt="Agendarvisita"
         src={img2.src}
       />
       <img
-        className="transform w-[210px] h-auto hover:scale-125 border-2 rounded-xl z-30 hover:border-teal-700 hover:blur-0 transition-all duration-300 ease-in-out cursor-pointer"
+        className="transform w-[250px] h-auto hover:scale-110 rounded-lg z-30 opacity-90 hover:opacity-100 hover:border-teal-700 hover:blur-0 transition-all duration-300 ease-in-out cursor-pointer shadow-black drop-shadow-xl shadow-2xl"
         alt="Agendarvisita"
         src={img3.src}
       />
       <img
-        className="transform w-[150px] h-auto hover:scale-125 border-2 rounded-xl blur-sm z-20 hover:border-teal-700 hover:blur-0 transition-all duration-300 ease-in-out cursor-pointer"
+        className="transform w-[250px] mt-10 h-auto rotate-6 hover:scale-110 rounded-lg z-20 opacity-90 hover:opacity-100 hover:border-teal-700 hover:blur-0 transition-all duration-300 ease-in-out cursor-pointer shadow-black drop-shadow-xl shadow-2xl"
         alt="Agendarvisita"
-        src={img4.src}
+        src={img1.src}
       />
-      <img
-        className="transform w-[105px] h-auto hover:scale-125 border-2 rounded-xl blur-sm z-10 hover:border-teal-700 hover:blur-0 transition-all duration-300 ease-in-out cursor-pointer"
-        alt="Agendarvisita"
-        src={img5.src}
-      />
+
     </div>
   );
 };
