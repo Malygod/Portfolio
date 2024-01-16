@@ -7,7 +7,7 @@ import img5 from "../img/dataformWS.jpg"
 
 export const WorkoutsyncImg = () => {
   return (
-    <div className="h-[580px] w-full max-w-full flex justify-center items-center xl:h-[650px] z-50">
+    <div className="h-[650px] w-full max-w-full flex justify-center items-center z-50 overflow-x-hidden overflow-y-visible">
 
       <img
         className="transform w-[250px] mt-10 h-auto -rotate-6 hover:scale-110 rounded-lg z-20 opacity-90 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer shadow-black drop-shadow-xl shadow-2xl"
