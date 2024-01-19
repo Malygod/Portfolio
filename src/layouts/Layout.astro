@@ -6,7 +6,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
 ---
 
 <!doctype html>
@@ -25,7 +24,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <div
-      class="absolute max-w-full top-0 z-[-2] h-svh w-svw bg-black bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(240,50,100,0.3),rgba(255,255,255,0))]"
+      class="absolute max-w-full top-0 z-[-2] h-svh w-svw bg-black bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,100,100,0.3),rgba(255,255,255,0))]"
     >
       <Nav href="/" href="/" href="/" href="/" />
       <slot />
@@ -71,4 +70,42 @@ const { title } = Astro.props;
     scrollbar-width: thin; /* Ancho del scrollbar */
     scrollbar-color: #888 #f1f1f1; /* Color del pulgar y la pista del scrollbar */
   }
+
+  /* animation slide up */
+
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0%, 0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.7s ease-out;
+    opacity: 1;
+  }
+
+  /* animation left to right */
+
+  @keyframes slide-right {
+    0% {
+      opacity: 0;
+      transform: translate3d(50%, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .animate-slide-right {
+    animation: slide-right 1s ease-out;
+    opacity: 1;
+  }
+
+
 </style>
