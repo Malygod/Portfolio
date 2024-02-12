@@ -11,24 +11,13 @@ import arrow from "../img/arrowDown.jpg";
 import WorkoutSync from "../img/logoGrisNegro.jpg";
 import { WorkoutsyncImg } from "../components/workoutsyncImg";
 import AtaliaExtra from "../components/ataliaExtra";
-import WorkoutsyncExtra from "../components/workoutsyncExtra";
-import React, { useEffect } from 'react';
-import { activateScrollAnimation } from '../components/SmoothScroll';
-
-
-
-
 ---
 
-<Fragment>
-  {activateScrollAnimation('targetDiv', 'animate-slide-up')}
-</Fragment>
-
 <Layout title="Portfolio">
-  <section class="">
+  <section class="dark:text-white">
     <div id="start" class="flex justify-center pt-12 sm:pt-24">
       <div
-        class="flex justify-center items-center w-40 h-40 overflow-hidden rounded-full border-[3px] border-white antialiased"
+        class="flex justify-center items-center w-40 h-40 overflow-hidden rounded-full border-[3px] border-neutral-700 dark:border-white antialiased"
       >
         <a href="https://www.linkedin.com/in/matias-sepúlveda-1914152a7">
           <Image
@@ -45,27 +34,19 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
       />
     </div>
     <div class="flex justify-center pt-36">
-      <h1 class="text-white text-center text-2xl xl:text-3xl">
-        Matías Sepúlveda
-      </h1>
+      <h1 class="text-center text-2xl xl:text-3xl">Matías Sepúlveda</h1>
     </div>
     <div class="flex justify-center pt-16">
-      <h1 class="text-white text-center text-4xl md:text-7xl">
-        Software Engineer
-      </h1>
+      <h1 class="text-center text-4xl md:text-7xl">Software Engineer</h1>
     </div>
     <div class="flex justify-center pt-16">
-      <h1
-        class="text-white text-center text-xl xl:text-2xl px-5 sm:px-0 max-w-[490px]"
-      >
+      <h1 class="text-center text-xl xl:text-2xl px-5 sm:px-0 max-w-[490px]">
         Passionate about crafting visually appealing interfaces and designing
         new software solutions to meet user needs.
       </h1>
     </div>
     <div class="flex justify-center pt-5 sm:pt-10">
-      <h1 class="text-white text-center text-2xl xl:text-3xl">
-        (Work in progress)
-      </h1>
+      <h1 class="text-center text-2xl xl:text-3xl">(Work in progress)</h1>
     </div>
     <div class="flex justify-center items-center pt-10 sm:pt-20">
       <div class="flex justify-around w-36 h-36">
@@ -85,7 +66,7 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="transform text-white h-12 w-auto hover:text-rose-200 duration-150 ease-out hover:scale-125"
+            class="transform dark:text-white h-12 w-auto hover:text-zinc-700 duration-150 ease-out hover:scale-125"
             ><path
               d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
             ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
@@ -95,11 +76,12 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
     </div>
   </section>
   <div class="h-96 flex justify-center items-center"></div>
-  <div id="experience" class="pt-[100px]">
+  <h1 class="text-6xl text-center dark:text-white pb-32">Experience</h1>
+  <div id="experience" class="hidden sm:flex pt-[100px]">
     <Forest />
   </div>
   <div
-    class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-gradient-to-b xl:bg-gradient-to-r from-black via-teal-900 to-teal-400"
+    class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-stone-100 dark:bg-stone-900"
   >
     <div
       class="pt-5 justify-center xl:pt-32 w-full sm:w-full md:w-full lg:w-full xl:w-2/4"
@@ -118,13 +100,15 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
         </div>
       </div>
       <div class="py-5">
-        <h1 class="text-white text-center xl:text-left text-3xl xl:text-4xl">
+        <h1
+          class="dark:text-white text-center xl:text-left text-3xl xl:text-4xl"
+        >
           Junior Software Engineer
         </h1>
       </div>
       <div class="w-full">
         <p
-          class="px-[10%] lg:px-[20%] xl:px-0 text-white text-center xl:text-left text-md xl:max-w-[500px]"
+          class="px-[10%] lg:px-[20%] xl:px-0 dark:text-white text-center xl:text-left text-md xl:max-w-[500px]"
         >
           Revolutionized real estate operations at Inmobiliaria Atalia Limitada
           from Sept 2021 to Mar 2023 by designing, developing and implementing a
@@ -143,7 +127,7 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
   </div>
   <div class="flex justify-center mt-10 z-50 pb-[200px]">
     <button>
-      <details>
+      <details class="hidden">
         <summary class="flex pt-5 text-black animate-bounce justify-center"
           ><Image
             src={arrow}
@@ -155,11 +139,12 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
       </details>
     </button>
   </div>
-  <div id="projects" class="pt-[100px]">
+  <h1 class="text-6xl text-center dark:text-white pb-32">Projects</h1>
+  <div id="projects" class="hidden sm:flex pt-[100px]">
     <Red />
   </div>
   <div
-    class="grid relative xl:flex xl:px-[5%] 2xl:px-[10%] bg-gradient-to-b xl:bg-gradient-to-r from-black via-red-900 to-red-400"
+    class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-stone-100 dark:bg-stone-900"
   >
     <div
       class="pt-5 justify-center xl:pt-24 w-full sm:w-full md:w-full lg:w-full xl:w-2/4"
@@ -178,13 +163,15 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
         </div>
       </div>
       <div class="py-5">
-        <h1 class="text-white text-center xl:text-left text-3xl xl:text-4xl">
+        <h1
+          class="dark:text-white text-center xl:text-left text-3xl xl:text-4xl"
+        >
           Workout Journey Project
         </h1>
       </div>
       <div class="w-full">
-        <h1
-          class="px-[10%] lg:px-[20%] xl:px-0 text-white text-center xl:text-left text-md xl:max-w-[500px]"
+        <p
+          class="px-[10%] lg:px-[20%] xl:px-0 dark:text-white text-center xl:text-left text-md xl:max-w-[500px]"
         >
           This personal project aims to redefine the individual experience of
           physical activity by providing streamlined access to initiate a
@@ -192,10 +179,10 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
           tools to enhance their quality of life through their chosen physical
           activity, fostering a positive and lasting impact on personal
           well-being.
-        </h1>
+        </p>
       </div>
     </div>
-    <div class="animate-slide-up w-full xl:flex">
+    <div class="w-full xl:flex">
       <WorkoutsyncImg />
     </div>
   </div>
@@ -203,9 +190,10 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
     <Red />
   </div>
   <div class="flex justify-center mt-10 z-50 pb-[200px] relative">
-    <button>
+    <button class="hidden text-2xl">
+      View more
       <details>
-        <summary class="flex pt-5 text-white animate-bounce justify-center"
+        <summary class="flex pt-5 dark:text-white animate-bounce justify-center"
           ><Image
             src={arrow}
             alt="flecha"
@@ -216,8 +204,10 @@ import { activateScrollAnimation } from '../components/SmoothScroll';
       </details>
     </button>
   </div>
-  <h1 class="text-6xl text-center text-white pb-36">Skills</h1>
-  <div class="flex justify-evenly h-96">
+  <h1 class="text-6xl text-center dark:text-white pb-32">Skills</h1>
+  <section
+    class="sm:flex justify-center bg-stone-100 dark:bg-black overflow-hidden"
+  >
     <AtaliaExtra />
-  </div>
+  </section>
 </Layout>

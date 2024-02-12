@@ -3,7 +3,7 @@ import img from "../img/bosqueDifuso.jpg";
 export const Forest = () => {
     return (
         <div
-            className="flex h-[100px] xl-[125px] 2xl:h-[150px] w-full blur-[2px]"
+            className="hidden sm:flex h-[100px] xl-[125px] 2xl:h-[150px] w-full blur-[2px]"
             style={{
                 backgroundImage: `url(${img.src})`,
                 backgroundSize: 'cover',

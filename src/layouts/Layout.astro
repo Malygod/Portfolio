@@ -9,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -22,9 +22,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class=" bg-stone-100 dark:bg-black">
     <div
-      class="absolute max-w-full top-0 z-[-2] h-svh w-svw bg-black bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,100,100,0.3),rgba(255,255,255,0))]"
+      class="absolute max-w-full top-0 z-[-2] h-svh w-svw transition-colors duration-500 bg-[radial-gradient(ellipse_90%_80%_at_50%_-30%,rgba(150,0,0,1),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_70%_80%_at_50%_-20%,rgba(50,50,50,0.8),rgba(255,255,255,0))]"
     >
       <Nav href="/" href="/" href="/" href="/" />
       <slot />
@@ -34,7 +34,6 @@ const { title } = Astro.props;
 <style is:global>
   html {
     font-family: system-ui, "Segoe UI";
-    background: black;
   }
   code {
     font-family:
@@ -49,26 +48,28 @@ const { title } = Astro.props;
   }
   /* Estilo para Chrome, Safari y Opera */
   ::-webkit-scrollbar {
-    width: 0px; /* Ancho del scrollbar */
+    scrollbar-width: thin; /* Ancho del scrollbar */
+    scrollbar-color: white black; /* Color del pulgar y la pista del scrollbar */
+    width: 5px; /* Ancho del scrollbar */
   }
 
   ::-webkit-scrollbar-track {
-    background: transparent; /* Color de la pista del scrollbar */
+    background: #555; /* Color de la pista del scrollbar */
   }
 
   ::-webkit-scrollbar-thumb {
-    background: white; /* Color del pulgar del scrollbar */
+    background: #555; /* Color del pulgar del scrollbar */
     display: none;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color del pulgar del scrollbar al pasar el mouse */
+    background: #000000; /* Color del pulgar del scrollbar al pasar el mouse */
   }
 
   /* Estilo para Firefox */
   * {
     scrollbar-width: thin; /* Ancho del scrollbar */
-    scrollbar-color: #888 #f1f1f1; /* Color del pulgar y la pista del scrollbar */
+    scrollbar-color: white black; /* Color del pulgar y la pista del scrollbar */
   }
 
   /* animation slide up */
@@ -106,6 +107,4 @@ const { title } = Astro.props;
     animation: slide-right 1s ease-out;
     opacity: 1;
   }
-
-
 </style>
