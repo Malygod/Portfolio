@@ -4,22 +4,26 @@ import { Image } from "astro:assets";
 import Foto from "../img/yo.jpg";
 import Atalia from "../img/ataliaLogo.png";
 import { AtaliaMF } from "../components/ataliaFM";
+import { DarkMode } from "../components/DarkMode";
 import Forest from "../components/bgForest";
 import Red from "../components/bgSport";
 import Chile from "../img/chilexd.png";
 import arrow from "../img/arrowDown.jpg";
 import WorkoutSync from "../img/logoGrisNegro.jpg";
 import { WorkoutsyncImg } from "../components/workoutsyncImg";
-import AtaliaExtra from "../components/ataliaExtra";
+import Skills from "../components/Skills";
+import resume from "../img/resume.png";
 ---
 
 <Layout title="Portfolio">
-  <section class="dark:text-white">
-    <div id="start" class="flex justify-center pt-12 sm:pt-24">
+  <section class="relative dark:text-white">
+    <div id="start" class="flex justify-center pt-12">
       <div
-        class="flex justify-center items-center w-40 h-40 overflow-hidden rounded-full border-[3px] border-neutral-700 dark:border-white antialiased"
+        class="flex justify-center items-center w-36 h-36 overflow-hidden rounded-full border-[3px] border-neutral-700 dark:border-white antialiased"
       >
-        <a href="https://www.linkedin.com/in/matias-sepúlveda-1914152a7">
+        <a
+          href="https://www.linkedin.com/in/mat%C3%ADas-sep%C3%BAlveda-1914152a7/"
+        >
           <Image
             src={Foto}
             alt="Foto de perfil"
@@ -30,7 +34,7 @@ import AtaliaExtra from "../components/ataliaExtra";
       <Image
         src={Chile}
         alt="Country"
-        class="absolute w-10 h-auto top-[265px] sm:top-[430px] rounded-sm"
+        class="absolute w-10 h-auto top-[260px] sm:top-[260px] rounded-sm"
       />
     </div>
     <div class="flex justify-center pt-36">
@@ -45,10 +49,8 @@ import AtaliaExtra from "../components/ataliaExtra";
         new software solutions to meet user needs.
       </h1>
     </div>
-    <div class="flex justify-center pt-5 sm:pt-10">
-      <h1 class="text-center text-2xl xl:text-3xl">(Work in progress)</h1>
-    </div>
-    <div class="flex justify-center items-center pt-10 sm:pt-20">
+    <DarkMode />
+    <div class="flex justify-center items-center pt-10 sm:pt-16">
       <div class="flex justify-around w-36 h-36">
         <a
           href="https://github.com/malygod"
@@ -66,7 +68,7 @@ import AtaliaExtra from "../components/ataliaExtra";
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="transform dark:text-white h-12 w-auto hover:text-zinc-700 duration-150 ease-out hover:scale-125"
+            class="transform dark:text-white h-10 w-auto hover:text-zinc-700 duration-150 ease-out hover:scale-125"
             ><path
               d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
             ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
@@ -75,13 +77,12 @@ import AtaliaExtra from "../components/ataliaExtra";
       </div>
     </div>
   </section>
-  <div class="h-96 flex justify-center items-center"></div>
-  <h1 class="text-6xl text-center dark:text-white pb-32">Experience</h1>
-  <div id="experience" class="hidden sm:flex pt-[100px]">
+  <h1 class="text-6xl text-center dark:text-white py-48">Experience</h1>
+  <div id="experience" class="hidden sm:flex">
     <Forest />
   </div>
   <div
-    class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-stone-100 dark:bg-stone-900"
+    class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-stone-100 dark:bg-neutral-950"
   >
     <div
       class="pt-5 justify-center xl:pt-32 w-full sm:w-full md:w-full lg:w-full xl:w-2/4"
@@ -125,7 +126,7 @@ import AtaliaExtra from "../components/ataliaExtra";
   <div class="">
     <Forest />
   </div>
-  <div class="flex justify-center mt-10 z-50 pb-[200px]">
+  <div class="flex justify-center z-50">
     <button>
       <details class="hidden">
         <summary class="flex pt-5 text-black animate-bounce justify-center"
@@ -139,12 +140,12 @@ import AtaliaExtra from "../components/ataliaExtra";
       </details>
     </button>
   </div>
-  <h1 class="text-6xl text-center dark:text-white pb-32">Projects</h1>
-  <div id="projects" class="hidden sm:flex pt-[100px]">
+  <h1 class="text-6xl text-center dark:text-white py-48">Projects</h1>
+  <div id="projects" class="hidden sm:flex">
     <Red />
   </div>
   <div
-    class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-stone-100 dark:bg-stone-900"
+    class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-stone-100 dark:bg-neutral-950"
   >
     <div
       class="pt-5 justify-center xl:pt-24 w-full sm:w-full md:w-full lg:w-full xl:w-2/4"
@@ -189,7 +190,7 @@ import AtaliaExtra from "../components/ataliaExtra";
   <div class="z-0">
     <Red />
   </div>
-  <div class="flex justify-center mt-10 z-50 pb-[200px] relative">
+  <div class="flex justify-center mt-10 z-50 relative">
     <button class="hidden text-2xl">
       View more
       <details>
@@ -204,10 +205,18 @@ import AtaliaExtra from "../components/ataliaExtra";
       </details>
     </button>
   </div>
-  <h1 class="text-6xl text-center dark:text-white pb-32">Skills</h1>
+  <h1 class="text-6xl text-center dark:text-white py-48">About</h1>
+  <section class="sm:flex justify-center bg-stone-100 dark:bg-neutral-950">
+    <Image
+      src={resume}
+      alt="CV"
+      class="w-full sm:w-2/3 md:w-2/4 xl:w-1/3 h-auto shadow-2xl shadow-black"
+    />
+  </section>
+  <h1 class="text-6xl text-center dark:text-white py-48">Skills</h1>
   <section
-    class="sm:flex justify-center bg-stone-100 dark:bg-black overflow-hidden"
+    class="sm:flex justify-center bg-stone-100 dark:bg-neutral-950 overflow-hidden"
   >
-    <AtaliaExtra />
+    <Skills />
   </section>
 </Layout>
