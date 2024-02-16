@@ -26,11 +26,12 @@ const { title } = Astro.props;
     <div
       class="absolute max-w-full top-0 z-[-2] h-svh w-svw transition-colors duration-500 bg-[radial-gradient(ellipse_90%_80%_at_50%_-30%,rgba(150,0,0,1),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_70%_80%_at_50%_-20%,rgba(50,50,50,0.8),rgba(255,255,255,0))]"
     >
-      <Nav href="/" href="/" href="/" href="/" />
-      <slot />
     </div>
+    <Nav href="/" href="/" href="/" href="/" />
+    <slot />
   </body>
 </html>
+
 <style is:global>
   html {
     font-family: system-ui, "Segoe UI";

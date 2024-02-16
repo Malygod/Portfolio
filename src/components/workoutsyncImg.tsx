@@ -18,7 +18,7 @@ export const WorkoutsyncImg = () => {
         src={img2.src}
       />
       <img
-        className="transform w-[160px] xl:w-[250px] h-auto hover:scale-110 rounded-lg z-30 transition-all duration-300 ease-in-out cursor-pointer shadow-black shadow-2xl"
+        className="transform w-[180px] xl:w-[270px] h-auto hover:scale-110 rounded-lg z-30 transition-all duration-300 ease-in-out cursor-pointer shadow-black shadow-2xl"
         alt="Agendarvisita"
         src={img3.src}
       />
