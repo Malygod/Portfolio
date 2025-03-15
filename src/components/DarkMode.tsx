@@ -22,9 +22,9 @@ export default function SwitchDark(): JSX.Element {
       <Switch
         checked={enabled}
         onChange={setEnabled}
-        className="group inline-flex h-6 w-11 items-center rounded-full bg-neutral-800 transition data-[checked]:bg-stone-100 mx-auto"
+        className="group inline-flex h-6 w-16 items-center rounded-full bg-neutral-800 transition data-[checked]:bg-stone-100 mx-auto"
       >
-        <span className="size-4 translate-x-1 rounded-full bg-neutral-500 transition group-data-[checked]:translate-x-6" />
+        <span className="size-4 translate-x-1 rounded-full bg-neutral-500 transition group-data-[checked]:translate-x-11" />
       </Switch>
     </div>
   );

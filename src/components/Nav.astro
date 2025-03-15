@@ -1,51 +1,42 @@
 ---
 import SwitchDark from "../components/darkMode";
-
-interface navProps {
-  href: string;
-}
-
-const { href } = Astro.props;
 ---
-<div class="flex sm:hidden pt-6">
+
+<div class="sm:flex pt-6">
   <SwitchDark client:only />
 </div>
 <div
-  class="hidden sm:flex justify-center items-center py-10 sticky dark:text-white"
+  class="hidden sm:flex justify-center items-center text-center py-10 sticky dark:text-white"
 >
-
-  <ul class="flex justify-center max-w-md">
-    <li class="ml-30">
-      <SwitchDark client:only />
-    </li>
-    <li>
+  <ul class="flex justify-evenly max-w-md">
+    <li class="mx-24">
       <a
-        class="px-0 sm:px-8 md:px-10 xl:px-16 hover:text-zinc-500 text-2xl"
+        class="hover:text-zinc-500 text-2xl"
         href="#start">Start</a
       >
     </li>
-    <li>
+    <li class="mx-24">
       <a
-        class="px-0 sm:px-8 md:px-10 xl:px-16 hover:text-zinc-500 text-2xl"
+        class="hover:text-zinc-500 text-2xl"
         href="#experience">Experience</a
       >
     </li>
-    <li>
+    <li class="mx-24">
       <a
-        class="px-0 sm:px-8 md:px-10 xl:px-16 hover:text-zinc-500 text-2xl"
+        class="hover:text-zinc-500 text-2xl"
         href="#projects">Projects</a
       >
     </li>
-    <li>
+    <li class="mx-24">
       <a
-        class="px-0 sm:px-8 md:px-10 xl:px-16 hover:text-zinc-500 text-2xl"
-        href={href}>About</a
+        class="hover:text-zinc-500 text-2xl"
+        href="#about">About</a
       >
     </li>
-    <li>
+    <li class="mx-24">
       <a
-        class="px-0 sm:px-8 md:px-10 xl:px-16 hover:text-zinc-500 text-2xl"
-        href={href}>Skills</a
+        class="hover:text-zinc-500 text-2xl"
+        href="#skills">Skills</a
       >
     </li>
   </ul>

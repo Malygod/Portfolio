@@ -12,14 +12,14 @@ import WorkoutSync from "../img/logoGrisNegro.jpg";
 import { WorkoutsyncImg } from "../components/workoutsyncImg";
 import Skills from "../components/Skills";
 import resume from "../img/Resume.png";
-import SwitchDark from "../components/darkMode";
 ---
 
 <Layout title="Portfolio">
   <section class="relative dark:text-white">
     <div id="start" class="flex justify-center pt-12">
       <div
-        class="flex justify-center items-center w-60 h-auto overflow-hidden rounded-full border-[2px] antialiased">
+        class="flex justify-center items-center w-60 h-auto overflow-hidden rounded-full border-[2px] antialiased"
+      >
         <a
           href="https://www.linkedin.com/in/mat%C3%ADas-sep%C3%BAlveda-1914152a7/"
         >
@@ -227,7 +227,7 @@ import SwitchDark from "../components/darkMode";
     About
   </h1>
 
-  <section class="relative">
+  <section id="about" class="relative">
     <div class="sm:flex justify-center bg-stone-100 dark:bg-neutral-950">
       <Image
         src={resume}
@@ -241,9 +241,7 @@ import SwitchDark from "../components/darkMode";
   >
     Skills
   </h1>
-  <section
-    class="sm:flex justify-center bg-stone-100 dark:bg-neutral-950 overflow-hidden pb-20"
-  >
+  <section id="skills" class="sm:flex justify-center bg-stone-100 dark:bg-neutral-950 overflow-hidden pb-20">
     <Skills />
   </section>
 </Layout>
