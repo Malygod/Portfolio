@@ -36,7 +36,7 @@ const Skills = () => {
             </div>
 
             <div
-                className="flex justify-center items-center bg-stone-950 dark:bg-neutral-900 h-16 w-16 xl:h-24 xl:w-24 rounded-full antialiased"
+                className="flex justify-center items-center fill-white bg-stone-950 dark:bg-neutral-900 h-16 w-16 xl:h-24 xl:w-24 rounded-full antialiased"
             >
                 <svg className='transform w-auto h-7 xl:h-10 hover:scale-110 transition-all duration-300 ease-in-out' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 304 182">
 

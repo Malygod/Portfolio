@@ -1,10 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import Foto from "../img/yo.jpg";
+import Foto from "../img/photo.jpg";
 import Atalia from "../img/ataliaLogo.png";
 import { AtaliaMF } from "../components/ataliaFM";
-import { DarkMode } from "../components/DarkMode";
 import Forest from "../components/bgForest";
 import Red from "../components/bgSport";
 import Chile from "../img/chilexd.png";
@@ -13,14 +12,14 @@ import WorkoutSync from "../img/logoGrisNegro.jpg";
 import { WorkoutsyncImg } from "../components/workoutsyncImg";
 import Skills from "../components/Skills";
 import resume from "../img/Resume.png";
+import SwitchDark from "../components/darkMode";
 ---
 
 <Layout title="Portfolio">
   <section class="relative dark:text-white">
     <div id="start" class="flex justify-center pt-12">
       <div
-        class="flex justify-center items-center w-36 h-36 overflow-hidden rounded-full border-[3px] border-stone-600 dark:border-white antialiased"
-      >
+        class="flex justify-center items-center w-60 h-auto overflow-hidden rounded-full border-[2px] antialiased">
         <a
           href="https://www.linkedin.com/in/mat%C3%ADas-sep%C3%BAlveda-1914152a7/"
         >
@@ -30,10 +29,10 @@ import resume from "../img/Resume.png";
       <Image
         src={Chile}
         alt="Country"
-        class="absolute w-10 h-auto top-[260px] sm:top-[260px] rounded-sm"
+        class="absolute w-10 h-auto top-[360px] sm:top-[360px] rounded-sm"
       />
     </div>
-    <div class="flex justify-center pt-36">
+    <div class="flex justify-center pt-28">
       <h1
         class="text-center text-2xl xl:text-4xl bg-gradient-to-r from-stone-400 via-stone-500 to-stone-400 bg-clip-text text-transparent"
       >
@@ -55,7 +54,6 @@ import resume from "../img/Resume.png";
         new software solutions to meet user needs.
       </h1>
     </div>
-    <DarkMode />
     <div class="flex justify-center items-center pt-16">
       <div class="flex justify-around w-36 h-36">
         <a
@@ -118,7 +116,7 @@ import resume from "../img/Resume.png";
         <h1
           class="dark:text-white text-center xl:text-left text-3xl xl:text-4xl"
         >
-          Junior Software Engineer
+          Fullstack developer
         </h1>
       </div>
       <div class="w-full">
