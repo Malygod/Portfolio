@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Switch } from "@headlessui/react";
 
-export default function SwitchDark(): JSX.Element {
+export default function SwitchTheme(): JSX.Element {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
