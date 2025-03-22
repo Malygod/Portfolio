@@ -26,7 +26,7 @@ const Navbar = () => {
         id="navbar"
         className="hidden sm:flex justify-center items-center text-zinc-800 dark:text-zinc-300 text-center py-6 sticky top-0 z-50 transition-colors duration-300"
       >
-        <ul className="flex justify-evenly max-w-5xl w-full text-[22px] bg-gradient-to-r from-stone-400 via-stone-500 to-stone-400 bg-clip-text text-transparent text-pretty">
+        <ul className="flex justify-evenly max-w-5xl w-full text-[22px] bg-gradient-to-r from-stone-600 via-stone-800 to-stone-600 dark:from-stone-300 dark:via-stone-400 dark:to-stone-300 bg-clip-text text-transparent text-pretty">
           <li><a className="hover:text-zinc-500 transition-colors duration-300" href="#start">Start</a></li>
           <li><a className="hover:text-zinc-500 transition-colors duration-300" href="#experience">Experience</a></li>
           <li><a className="hover:text-zinc-500 transition-colors duration-300" href="#projects">Projects</a></li>
