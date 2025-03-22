@@ -7,9 +7,9 @@ const Navbar = () => {
 
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        navbar && navbar.classList.add("bg-white", "shadow-md", "dark:bg-neutral-950");
+        navbar && navbar.classList.add("bg-stone-100", "shadow-md", "dark:bg-neutral-950");
       } else {
-        navbar && navbar.classList.remove("bg-white", "shadow-md", "dark:bg-neutral-950");
+        navbar && navbar.classList.remove("bg-stone-100", "shadow-md", "dark:bg-neutral-950");
       }
     };
 

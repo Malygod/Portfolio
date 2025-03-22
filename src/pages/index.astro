@@ -12,6 +12,7 @@ import WorkoutSync from "../img/logoGrisNegro.jpg";
 import { WorkoutsyncImg } from "../components/workoutsyncImg";
 import Skills from "../components/Skills";
 import resume from "../img/Resume.png";
+import { lazy } from "react";
 ---
 
 <Layout title="Portfolio">
@@ -23,7 +24,7 @@ import resume from "../img/Resume.png";
         <a
           href="https://www.linkedin.com/in/mat%C3%ADas-sep%C3%BAlveda-1914152a7/"
         >
-          <Image src={Foto} alt="Foto de perfil" class="w-full h-auto" />
+          <Image src={Foto} loading="eager" alt="Foto de perfil" class="w-full h-auto" />
         </a>
       </div>
       <Image
@@ -54,13 +55,13 @@ import resume from "../img/Resume.png";
         new software solutions.
       </h1>
     </div>
-    <div class="flex justify-center items-center pt-16">
+    <div class="flex justify-center">
       <div class="flex justify-around w-36 h-36">
         <a
           href="https://github.com/malygod"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex animate-pulse"
+          class="inline-flex animate-pulse self-center"
           aria-label="GitHub"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,13 +83,11 @@ import resume from "../img/Resume.png";
     </div>
   </section>
   <h1
-    class="text-6xl text-center py-48 mb-3 animate-pulse bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-transparent"
+    class="text-6xl text-center h-[24rem] py-24 animate-pulse bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-transparent"
   >
     Experience
   </h1>
-  <hr
-    class="container hidden mx-auto w-full mb-24 h-[4px] bg-gradient-to-r dark:hidden from-stone-100 via-rose-500 to-stone-100 rounded-2xl"
-  />
+
   <div id="experience" class="hidden sm:flex">
     <Forest />
   </div>
