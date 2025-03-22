@@ -26,12 +26,12 @@ const Navbar = () => {
         id="navbar"
         className="hidden sm:flex justify-center items-center text-zinc-800 dark:text-zinc-300 text-center py-6 sticky top-0 z-50 transition-colors duration-300"
       >
-        <ul className="flex justify-evenly max-w-4xl w-full">
-          <li><a className="hover:text-zinc-500 text-xl font-medium transition-colors duration-300" href="#start">Start</a></li>
-          <li><a className="hover:text-zinc-500 text-xl font-medium transition-colors duration-300" href="#experience">Experience</a></li>
-          <li><a className="hover:text-zinc-500 text-xl font-medium transition-colors duration-300" href="#projects">Projects</a></li>
-          <li><a className="hover:text-zinc-500 text-xl font-medium transition-colors duration-300" href="#about">About</a></li>
-          <li><a className="hover:text-zinc-500 text-xl font-medium transition-colors duration-300" href="#skills">Skills</a></li>
+        <ul className="flex justify-evenly max-w-5xl w-full text-[22px] bg-gradient-to-r from-stone-400 via-stone-500 to-stone-400 bg-clip-text text-transparent text-pretty">
+          <li><a className="hover:text-zinc-500 transition-colors duration-300" href="#start">Start</a></li>
+          <li><a className="hover:text-zinc-500 transition-colors duration-300" href="#experience">Experience</a></li>
+          <li><a className="hover:text-zinc-500 transition-colors duration-300" href="#projects">Projects</a></li>
+          <li><a className="hover:text-zinc-500 transition-colors duration-300" href="#about">About</a></li>
+          <li><a className="hover:text-zinc-500 transition-colors duration-300" href="#skills">Skills</a></li>
         </ul>
       </div>
       <div className="sm:flex pt-6">
