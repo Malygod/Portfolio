@@ -23,7 +23,7 @@ const Navbar = () => {
     <>
       <div
         id="navbar"
-        className="hidden sm:flex justify-center items-center text-zinc-800 dark:text-zinc-400 w-full overflow-visible text-center py-6 sticky top-0 z-50 transition-colors duration-100"
+        className="hidden sm:flex justify-center items-center text-zinc-800 dark:text-zinc-400 w-full overflow-visible text-center py-4 sticky top-0 z-50 transition-colors duration-100"
       >
         <ul className="flex justify-evenly max-w-5xl w-full text-[22px] text-pretty">
           <li><a className="hover:text-zinc-100 transition-colors duration-300" href="#start">Start</a></li>
