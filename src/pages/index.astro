@@ -16,8 +16,8 @@ import SwitchTheme from "../components/switchTheme";
 ---
 
 <Layout title="Portfolio">
-  <section class="relative dark:text-white">
-    <div id="start" class="flex justify-center pt-12">
+  <section id="start" class="relative dark:text-white">
+    <div class="flex justify-center pt-12">
       <div
         class="flex justify-center items-center w-60 h-auto overflow-hidden rounded-full border-[2px] antialiased"
       >
@@ -229,7 +229,7 @@ import SwitchTheme from "../components/switchTheme";
   </h1>
   <section id="about" class="relative">
     <div class="group relative sm:flex justify-center bg-stone-100 dark:bg-neutral-950 px-0 sm:px-5">
-      <div class="absolute animate-pulse w-0 sm:w-4/5 md:w-3/4 xl:w-2/4 h-auto -inset-y-1 rounded-md bg-gradient-to-r from-red-100 via-red-600 to-red-100 opacity-75 blur-lg transition duration-500 group-hover:opacity-100">
+      <div class="absolute animate-pulse group-hover:animate-none w-0 sm:w-4/5 md:w-3/4 xl:w-2/4 h-auto -inset-y-1 rounded-md bg-gradient-to-r from-red-100 via-red-600 to-red-100 opacity-75 blur-lg transition duration-500 group-hover:opacity-100">
       </div>
       <Image
         src={resume}
