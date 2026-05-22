@@ -7,12 +7,12 @@ import { AtaliaMF } from "../components/ataliaFM";
 import Forest from "../components/bgForest";
 import Red from "../components/bgSport";
 import Chile from "../img/chilexd.png";
-import arrow from "../img/arrowDown.jpg";
 import WorkoutSync from "../img/logoGrisNegro.jpg";
 import { WorkoutsyncImg } from "../components/workoutsyncImg";
 import Skills from "../components/Skills";
-import resume from "../img/Resume.png";
 import SwitchTheme from "../components/switchTheme";
+import ExperienceTimeline from "../components/ExperienceTimeline";
+import AboutSection from "../components/AboutSection";
 ---
 
 <Layout title="Portfolio">
@@ -44,14 +44,14 @@ import SwitchTheme from "../components/switchTheme";
       <h1
         class="text-center text-4xl md:text-7xl h-24 bg-gradient-to-r from-stone-400 via-stone-500 to-stone-400 bg-clip-text text-transparent"
       >
-        Software Engineer
+        Software Architect
       </h1>
     </div>
     <div class="flex justify-center pt-16">
       <h1
-        class="text-center text-xl xl:text-2xl px-5 sm:px-0 max-w-[490px] bg-gradient-to-r from-stone-400 via-stone-500 to-stone-400 bg-clip-text text-transparent text-pretty"
+        class="text-center text-xl xl:text-2xl px-5 sm:px-0 max-w-[560px] bg-gradient-to-r from-stone-400 via-stone-500 to-stone-400 bg-clip-text text-transparent text-pretty"
       >
-        Passionate about crafting high-quality experiences and software solutions.
+        Designing cloud-native platforms & distributed systems for mission-critical environments.
       </h1>
     </div>
     <div class="sm:flex pt-6">
@@ -94,6 +94,16 @@ import SwitchTheme from "../components/switchTheme";
     <Forest />
   </div>
 
+  <!-- Experience Timeline -->
+  <section class="relative z-10 bg-stone-100 dark:bg-neutral-950 py-16 sm:py-24">
+    <ExperienceTimeline client:load />
+  </section>
+
+  <div>
+    <Forest />
+  </div>
+
+  <!-- Atalia Project Showcase -->
   <div
     class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-stone-100 dark:bg-neutral-950"
   >
@@ -117,17 +127,17 @@ import SwitchTheme from "../components/switchTheme";
         <h1
           class="dark:text-white text-center xl:text-left text-3xl xl:text-4xl"
         >
-          Fullstack developer
+          Atalia — Real Estate Platform
         </h1>
       </div>
       <div class="w-full">
         <p
           class="px-[10%] lg:px-[20%] xl:px-0 dark:text-white text-center xl:text-left text-md xl:max-w-[500px]"
         >
-          Revolutionized real estate operations at Inmobiliaria Atalia Limitada
-          from Sept 2021 to Mar 2023 by designing, developing and implementing a
-          web platform from zero. Enhanced efficiency with multiple
-          functionalities for both staff and clients.
+          Designed, developed and implemented a web platform from zero for
+          Inmobiliaria Atalia Limitada (Sep 2021 – Mar 2023). Digitalized core
+          real estate operations with multiple functionalities for both staff
+          and clients, enhancing efficiency across the board.
         </p>
       </div>
       <div></div>
@@ -139,20 +149,7 @@ import SwitchTheme from "../components/switchTheme";
   <div class="">
     <Forest />
   </div>
-  <div class="flex justify-center z-50">
-    <button>
-      <details class="hidden">
-        <summary class="flex pt-5 text-black animate-bounce justify-center"
-          ><Image
-            src={arrow}
-            alt="flecha"
-            class="w-10 h-auto"
-            id="arrow"
-          /></summary
-        >
-      </details>
-    </button>
-  </div>
+
   <h1
     class="text-6xl text-center py-48 bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-transparent"
   >
@@ -207,36 +204,14 @@ import SwitchTheme from "../components/switchTheme";
   <div class="z-0">
     <Red />
   </div>
-  <div class="flex justify-center mt-10 z-50 relative">
-    <button class="hidden text-2xl">
-      View more
-      <details>
-        <summary class="flex pt-5 dark:text-white animate-bounce justify-center"
-          ><Image
-            src={arrow}
-            alt="flecha"
-            class="w-10 h-auto"
-            id="arrow"
-          /></summary
-        >
-      </details>
-    </button>
-  </div>
+
   <h1
     class="text-6xl text-center py-48 bg-gradient-to-r from-stone-300 via-stone-400 to-stone-300 bg-clip-text text-transparent"
   >
     About
   </h1>
-  <section id="about" class="relative">
-    <div class="group relative sm:flex justify-center bg-stone-100 dark:bg-neutral-950 px-0 sm:px-5">
-      <div class="absolute animate-pulse group-hover:animate-none w-0 sm:w-4/5 md:w-3/4 xl:w-2/4 h-auto -inset-y-1 rounded-md bg-gradient-to-r from-red-100 via-red-600 to-red-100 opacity-75 blur-lg transition duration-500 group-hover:opacity-100">
-      </div>
-      <Image
-        src={resume}
-        alt="CV"
-        class="w-full sm:w-4/5 md:w-3/4 xl:w-2/4 z-30 h-auto rounded-lg"
-      />
-    </div>
+  <section id="about" class="relative bg-stone-100 dark:bg-neutral-950 pb-16">
+    <AboutSection client:load />
   </section>
   <h1
     class="text-6xl text-center py-48 bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-transparent"
@@ -244,6 +219,6 @@ import SwitchTheme from "../components/switchTheme";
     Skills
   </h1>
   <section id="skills" class="sm:flex justify-center bg-stone-100 dark:bg-neutral-950 overflow-hidden pb-20">
-    <Skills />
+    <Skills client:load />
   </section>
 </Layout>
