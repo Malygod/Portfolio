@@ -115,6 +115,7 @@ const categories: SkillCategory[] = [
     accent: "from-emerald-400 to-teal-500",
     skills: [
       { name: "Go", icon: <GoIcon /> },
+      { name: "Goa", icon: <TextBadge text="Goa" /> },
       { name: "Node.js", icon: <NodeIcon /> },
       { name: "Express", icon: <ExpressIcon /> },
       { name: "TypeScript", icon: <TypeScriptIcon /> },
@@ -129,6 +130,7 @@ const categories: SkillCategory[] = [
       { name: "AWS", icon: <AWSIcon /> },
       { name: "Docker", icon: <DockerIcon /> },
       { name: "Terraform", icon: <TerraformIcon /> },
+      { name: "K8s", icon: <TextBadge text="K8s" /> },
     ],
   },
   {
@@ -139,6 +141,7 @@ const categories: SkillCategory[] = [
       { name: "MySQL", icon: <MySQLIcon /> },
       { name: "Redis", icon: <RedisIcon /> },
       { name: "gRPC", icon: <TextBadge text="gRPC" /> },
+      { name: "Pub/Sub", icon: <TextBadge text="Pub/Sub" /> },
     ],
   },
 ];

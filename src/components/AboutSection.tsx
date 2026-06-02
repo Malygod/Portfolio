@@ -20,7 +20,8 @@ const AboutSection = () => {
             multilingual internal platform for a multinational infrastructure
             project, translating business needs from Chinese leadership and
             Chilean department managers into scalable systems, workflows, and
-            reliable operations.
+            reliable operations. Open to relocation to the US, Canada, Ireland,
+            or New Zealand (available for On-site, Hybrid, or Remote setups).
           </p>
         </div>
       </div>
@@ -84,6 +85,7 @@ const AboutSection = () => {
               "Security & Access Control (JWT, RBAC, Secret Management)",
               "Infrastructure as Code (Terraform, Automated CI/CD, Docker)",
               "Microservices & Service-Based Architecture",
+              "AI Agent Integration (Goa-AI, LLM APIs, Qwen)",
             ].map((practice, index) => (
               <div
                 key={index}

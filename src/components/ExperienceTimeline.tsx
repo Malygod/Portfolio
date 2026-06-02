@@ -19,11 +19,12 @@ const experiences: ExperienceEntry[] = [
     type: "On-site",
     accent: "from-emerald-400 to-teal-600",
     highlights: [
-      "Led the architectural design of a cloud-native platform based on microservices and event-driven patterns on GCP, supporting multiple business domains and eliminating critical manual workflows.",
-      "Architected a decoupled, event-based workflow engine for multi-step approval pipelines, reducing turnaround time from days to hours.",
-      "Designed and implemented a centralized storage service and internal filesystem with GCS integration and quota enforcement to ensure data integrity and consistency.",
-      "Implemented JWT/RBAC, gRPC, REST, and Webhooks integrations under corporate security standards and CI/CD pipelines for production environments.",
-      "Built distributed mass communication systems with asynchronous processing, engagement tracking, and secure document streaming.",
+      "Led the architectural design of a cloud-native platform consisting of 8 Go backend services (using Goa v3 design-first framework) and a Next.js 16+ BFF frontend on GCP.",
+      "Integrated AI Agents using the Goa-AI framework and Qwen LLM (Alibaba Cloud) for automated role details generation and bilingual translation processing.",
+      "Designed an event-driven architecture utilizing Google Cloud Pub/Sub for centralized audit logging and async workflow state notifications.",
+      "Architected a decoupled workflow engine with timeout enforcement via Cloud Tasks and local fallback mechanisms, accelerating approval turnaround from days to hours.",
+      "Designed and implemented a centralized Storage Service with directory quotas and non-duplicating mirror links for multi-environment sharing.",
+      "Implemented secure asymmetric authentication (JWT RS256/RBAC), gRPC, and RESTful APIs, managed 100% via modular Terraform configurations (11 modules).",
     ],
   },
   {
