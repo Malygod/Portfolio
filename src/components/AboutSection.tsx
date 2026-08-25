@@ -1,152 +1,148 @@
 import { memo } from "react";
 
+interface ProfileLink {
+  label: string;
+  href: string;
+  external?: boolean;
+  download?: string;
+}
+
+const practices = [
+  "Distributed services and event-driven architecture",
+  "Asynchronous processing, idempotency, retry, and backoff",
+  "JWT RS256, RBAC, IAM, and service-to-service authentication",
+  "Infrastructure as Code with Terraform and automated CI/CD",
+  "ADRs, system design, and component, deployment, and data-flow diagrams",
+  "BFF and API aggregation with production observability",
+  "Applied AI with Vertex AI, Gemini, Qwen, RAG, and provider fallbacks",
+];
+
+const links: ProfileLink[] = [
+  { label: "Email", href: "mailto:matiasscontact@gmail.com" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/matias-sepulveda-illesca/",
+    external: true,
+  },
+  { label: "GitHub", href: "https://github.com/malygod", external: true },
+  {
+    label: "Résumé",
+    href: "/resume.pdf",
+    download: "Resume_Matias_Sepulveda.pdf",
+  },
+];
+
 const AboutSection = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Professional Summary */}
-      <div className="group relative mb-10">
-        <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-stone-300 via-stone-400 to-stone-300 dark:from-neutral-700 dark:via-neutral-600 dark:to-neutral-700 opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-500" />
-        <div className="relative bg-white/60 dark:bg-neutral-900/80 backdrop-blur-sm rounded-xl border border-stone-200/50 dark:border-neutral-800/50 p-6 sm:p-8 transition-all duration-300 group-hover:border-stone-300 dark:group-hover:border-neutral-700 group-hover:shadow-xl">
-          <h3 className="text-lg sm:text-xl font-semibold text-stone-800 dark:text-stone-100 mb-4 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600" />
-            Professional Summary
-          </h3>
-          <p className="text-sm sm:text-base text-stone-600 dark:text-stone-400 leading-relaxed">
-            Software engineer with 5+ years of professional experience,
-            progressing from full-stack applications to distributed backend
-            systems and cloud-native platform engineering. I work across the
-            complete production lifecycle—from architecture and
-            Terraform-managed infrastructure through implementation,
-            deployment, and operation. My recent focus is Go, TypeScript, GCP,
-            event-driven architecture, security, and AI-enabled workflows,
-            translating business requirements into pragmatic systems that are
-            maintainable in the real world.
-          </p>
-        </div>
-      </div>
-
-      {/* Grid: Education + Certifications + Architecture */}
-      <div className="grid sm:grid-cols-2 gap-6 mb-10">
-        {/* Education */}
-        <div className="group relative">
-          <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-blue-300 to-indigo-400 opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-500" />
-          <div className="relative bg-white/60 dark:bg-neutral-900/80 backdrop-blur-sm rounded-xl border border-stone-200/50 dark:border-neutral-800/50 p-6 transition-all duration-300 group-hover:border-stone-300 dark:group-hover:border-neutral-700 group-hover:shadow-xl h-full">
-            <h3 className="text-lg font-semibold text-stone-800 dark:text-stone-100 mb-3 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600" />
-              Education
-            </h3>
-            <div>
-              <p className="text-sm font-medium text-stone-700 dark:text-stone-300">
-                Bachelor's Degree in Software Engineering
-              </p>
-              <p className="text-sm text-stone-500 dark:text-stone-400 mt-1">
-                Universidad Tecnológica de Chile INACAP
-              </p>
+    <div className="mx-auto w-full max-w-5xl px-5 sm:px-8">
+      <div className="border-b border-stone-300 dark:border-neutral-700">
+        <section className="grid gap-6 border-t border-stone-300 py-10 dark:border-neutral-700 sm:grid-cols-[13rem_1fr] sm:gap-10 sm:py-12">
+          <div>
+            <p className="text-xs tabular-nums tracking-[0.2em] text-stone-400">01</p>
+            <div className="mt-3 flex items-center gap-3">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600" />
+              <h3 className="text-xs font-medium uppercase leading-5 tracking-[0.2em] text-stone-500 dark:text-stone-400">
+                Professional focus
+              </h3>
             </div>
           </div>
-        </div>
 
-        {/* Languages & Mobility */}
-        <div className="group relative">
-          <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-amber-300 to-orange-400 opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-500" />
-          <div className="relative bg-white/60 dark:bg-neutral-900/80 backdrop-blur-sm rounded-xl border border-stone-200/50 dark:border-neutral-800/50 p-6 transition-all duration-300 group-hover:border-stone-300 dark:group-hover:border-neutral-700 group-hover:shadow-xl h-full">
-            <h3 className="text-lg font-semibold text-stone-800 dark:text-stone-100 mb-3 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-gradient-to-br from-amber-400 to-orange-600" />
-              Languages & Mobility
-            </h3>
-            <ul className="space-y-2">
-              <li className="flex items-start gap-2 text-sm text-stone-600 dark:text-stone-400">
-                <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-br from-amber-400 to-orange-600" />
-                Spanish — Native · English — Advanced
-              </li>
-              <li className="flex items-start gap-2 text-sm text-stone-600 dark:text-stone-400">
-                <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-br from-amber-400 to-orange-600" />
-                Based in Chile · Open to relocation to the United States, Canada, Ireland, and Switzerland
-              </li>
-            </ul>
+          <div>
+            <p className="max-w-3xl text-pretty text-xl leading-9 tracking-tight text-stone-800 dark:text-stone-200 sm:text-2xl sm:leading-10">
+              I’m a software engineer focused on platform engineering and
+              distributed systems, taking cloud-native products from
+              architecture and infrastructure through implementation,
+              deployment, and production operation.
+            </p>
+            <p className="mt-6 max-w-3xl text-sm leading-7 text-stone-600 dark:text-stone-400 sm:text-base sm:leading-8">
+              My recent work spans Go, TypeScript, GCP, Terraform, Kubernetes,
+              event-driven systems, security, and applied AI—usually in
+              environments where technical decisions need to be pragmatic,
+              explainable, and owned end to end.
+            </p>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* Architecture & Practices */}
-      <div className="group relative mb-10">
-        <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-violet-300 to-purple-400 opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-500" />
-        <div className="relative bg-white/60 dark:bg-neutral-900/80 backdrop-blur-sm rounded-xl border border-stone-200/50 dark:border-neutral-800/50 p-6 sm:p-8 transition-all duration-300 group-hover:border-stone-300 dark:group-hover:border-neutral-700 group-hover:shadow-xl">
-          <h3 className="text-lg sm:text-xl font-semibold text-stone-800 dark:text-stone-100 mb-4 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-gradient-to-br from-violet-400 to-purple-600" />
-            Architecture & Practices
-          </h3>
-          <div className="grid sm:grid-cols-2 gap-3">
-            {[
-              "Distributed services and event-driven architecture",
-              "Asynchronous processing, idempotency, retry, and backoff",
-              "JWT RS256, RBAC, IAM, and service-to-service authentication",
-              "Infrastructure as Code with Terraform and automated CI/CD",
-              "ADRs, system design, and component/deployment/data-flow diagrams",
-              "BFF/API aggregation and production observability",
-              "Applied AI with Vertex AI, Gemini, Qwen, RAG, and provider fallbacks",
-            ].map((practice, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-2.5 text-sm text-stone-600 dark:text-stone-400 leading-relaxed"
+        <div className="grid border-t border-stone-300 dark:border-neutral-700 sm:grid-cols-2">
+          <section className="py-9 sm:pr-10 sm:py-10">
+            <p className="text-xs tabular-nums tracking-[0.2em] text-stone-400">02</p>
+            <h3 className="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400">
+              Education
+            </h3>
+            <p className="mt-6 text-lg font-medium text-stone-800 dark:text-stone-200">
+              Bachelor’s Degree in Software Engineering
+            </p>
+            <p className="mt-2 text-sm leading-7 text-stone-500 dark:text-stone-400">
+              Universidad Tecnológica de Chile INACAP
+            </p>
+          </section>
+
+          <section className="border-t border-stone-300 py-9 dark:border-neutral-700 sm:border-l sm:border-t-0 sm:py-10 sm:pl-10">
+            <p className="text-xs tabular-nums tracking-[0.2em] text-stone-400">03</p>
+            <h3 className="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400">
+              Languages &amp; mobility
+            </h3>
+            <p className="mt-6 text-lg font-medium text-stone-800 dark:text-stone-200">
+              Spanish — Native · English — Advanced
+            </p>
+            <p className="mt-2 text-sm leading-7 text-stone-500 dark:text-stone-400">
+              Based in Chile and open to relocation to the United States,
+              Canada, Ireland, and Switzerland.
+            </p>
+          </section>
+        </div>
+
+        <section className="grid gap-7 border-t border-stone-300 py-10 dark:border-neutral-700 sm:grid-cols-[13rem_1fr] sm:gap-10 sm:py-12">
+          <div>
+            <p className="text-xs tabular-nums tracking-[0.2em] text-stone-400">04</p>
+            <div className="mt-3 flex items-center gap-3">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-gradient-to-br from-violet-400 to-purple-600" />
+              <h3 className="text-xs font-medium uppercase leading-5 tracking-[0.2em] text-stone-500 dark:text-stone-400">
+                Architecture &amp; practices
+              </h3>
+            </div>
+          </div>
+
+          <ol className="grid gap-x-10 gap-y-5 sm:grid-cols-2">
+            {practices.map((practice, index) => (
+              <li
+                key={practice}
+                className="grid grid-cols-[1.75rem_1fr] gap-3 text-sm leading-7 text-stone-600 dark:text-stone-400"
               >
-                <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-br from-violet-400 to-purple-600" />
-                {practice}
-              </div>
+                <span className="pt-0.5 font-mono text-xs text-stone-400">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span>{practice}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <nav
+          aria-label="Contact and profile links"
+          className="grid gap-6 border-t border-stone-300 py-9 dark:border-neutral-700 sm:grid-cols-[13rem_1fr] sm:items-center sm:gap-10 sm:py-10"
+        >
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400">
+            Continue the conversation
+          </p>
+          <div className="flex flex-wrap gap-x-7 gap-y-4">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                download={link.download}
+                className="group inline-flex items-center gap-2 border-b border-stone-400 pb-1 text-sm text-stone-700 transition-colors hover:border-stone-800 hover:text-stone-950 dark:border-stone-600 dark:text-stone-300 dark:hover:border-stone-200 dark:hover:text-white"
+              >
+                {link.label}
+                <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
+                  {link.external ? "↗" : "→"}
+                </span>
+              </a>
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Contact Links */}
-      <div className="flex flex-wrap justify-center gap-4">
-        <a
-          href="mailto:matiasscontact@gmail.com"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-neutral-900/80 border border-stone-200/50 dark:border-neutral-800/50 text-sm text-stone-600 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 hover:border-stone-300 dark:hover:border-neutral-700 hover:shadow-lg transition-all duration-300"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <rect width="20" height="16" x="2" y="4" rx="2" />
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-          </svg>
-          matiasscontact@gmail.com
-        </a>
-        <a
-          href="https://www.linkedin.com/in/matias-sepulveda-illesca/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-neutral-900/80 border border-stone-200/50 dark:border-neutral-800/50 text-sm text-stone-600 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 hover:border-stone-300 dark:hover:border-neutral-700 hover:shadow-lg transition-all duration-300"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-            <rect width="4" height="12" x="2" y="9" />
-            <circle cx="4" cy="4" r="2" />
-          </svg>
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/malygod"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-neutral-900/80 border border-stone-200/50 dark:border-neutral-800/50 text-sm text-stone-600 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 hover:border-stone-300 dark:hover:border-neutral-700 hover:shadow-lg transition-all duration-300"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-            <path d="M9 18c-4.51 2-5-2-7-2" />
-          </svg>
-          GitHub
-        </a>
-        <a
-          href="/resume.pdf"
-          download="Resume_Matias_Sepulveda.pdf"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-neutral-900/80 border border-stone-200/50 dark:border-neutral-800/50 text-sm text-stone-600 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 hover:border-stone-300 dark:hover:border-neutral-700 hover:shadow-lg transition-all duration-300"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 3v12" />
-            <path d="m7 10 5 5 5-5" />
-            <path d="M5 21h14" />
-          </svg>
-          Résumé
-        </a>
+        </nav>
       </div>
     </div>
   );
