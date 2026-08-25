@@ -101,24 +101,15 @@ const TextBadge = ({ text }: { text: string }) => (
 
 const categories: SkillCategory[] = [
   {
-    label: "Frontend",
-    accent: "from-cyan-400 to-blue-500",
-    skills: [
-      { name: "React", icon: <ReactIcon /> },
-      { name: "Next.js", icon: <NextJsIcon /> },
-      { name: "Tailwind", icon: <TailwindIcon /> },
-      { name: "Astro", icon: <AstroIcon /> },
-    ],
-  },
-  {
-    label: "Backend",
+    label: "Languages & Backend",
     accent: "from-emerald-400 to-teal-500",
     skills: [
       { name: "Go", icon: <GoIcon /> },
       { name: "Goa", icon: <TextBadge text="Goa" /> },
+      { name: "TypeScript", icon: <TypeScriptIcon /> },
+      { name: "Python", icon: <TextBadge text="Python" /> },
       { name: "Node.js", icon: <NodeIcon /> },
       { name: "Express", icon: <ExpressIcon /> },
-      { name: "TypeScript", icon: <TypeScriptIcon /> },
       { name: "JavaScript", icon: <JavaScriptIcon /> },
     ],
   },
@@ -127,10 +118,11 @@ const categories: SkillCategory[] = [
     accent: "from-violet-400 to-purple-500",
     skills: [
       { name: "GCP", icon: <GCPIcon /> },
-      { name: "AWS", icon: <AWSIcon /> },
       { name: "Docker", icon: <DockerIcon /> },
       { name: "Terraform", icon: <TerraformIcon /> },
-      { name: "K8s", icon: <TextBadge text="K8s" /> },
+      { name: "GitHub Actions", icon: <TextBadge text="CI/CD" /> },
+      { name: "Cloud Run", icon: <TextBadge text="Run" /> },
+      { name: "Cloud Tasks", icon: <TextBadge text="Tasks" /> },
     ],
   },
   {
@@ -142,6 +134,37 @@ const categories: SkillCategory[] = [
       { name: "Redis", icon: <RedisIcon /> },
       { name: "gRPC", icon: <TextBadge text="gRPC" /> },
       { name: "Pub/Sub", icon: <TextBadge text="Pub/Sub" /> },
+    ],
+  },
+  {
+    label: "Frontend",
+    accent: "from-cyan-400 to-blue-500",
+    skills: [
+      { name: "React", icon: <ReactIcon /> },
+      { name: "Next.js", icon: <NextJsIcon /> },
+      { name: "Tailwind", icon: <TailwindIcon /> },
+      { name: "Astro", icon: <AstroIcon /> },
+      { name: "React Native", icon: <TextBadge text="Native" /> },
+    ],
+  },
+  {
+    label: "Applied AI",
+    accent: "from-rose-400 to-red-500",
+    skills: [
+      { name: "Vertex AI", icon: <TextBadge text="Vertex" /> },
+      { name: "Gemini", icon: <TextBadge text="Gemini" /> },
+      { name: "Qwen", icon: <TextBadge text="Qwen" /> },
+      { name: "RAG", icon: <TextBadge text="RAG" /> },
+      { name: "LLM APIs", icon: <TextBadge text="LLM" /> },
+    ],
+  },
+  {
+    label: "Familiar / Learning",
+    accent: "from-stone-400 to-stone-600",
+    skills: [
+      { name: "OpenTelemetry", icon: <TextBadge text="OTel" /> },
+      { name: "Kubernetes", icon: <TextBadge text="K8s" /> },
+      { name: "AWS", icon: <AWSIcon /> },
     ],
   },
 ];

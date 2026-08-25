@@ -16,31 +16,32 @@ const Navbar = () => {
   }, []);
 
   return (
-    <>
-      <div
+    <nav
         id="navbar"
-        className="hidden sm:flex justify-center items-center text-zinc-800 dark:text-zinc-400 w-full overflow-visible text-center py-4 sticky top-0 z-50 transition-all duration-300"
+        aria-label="Primary navigation"
+        className="sticky top-0 z-50 flex w-full items-center justify-center overflow-x-auto px-3 py-3 text-center text-stone-700 transition-all duration-300 dark:text-stone-300 sm:px-6 sm:py-4"
         style={
           scrolled
             ? {
-                backgroundColor: "rgba(0, 0, 0, 0.1)",
-                backdropFilter: "blur(5px)",
-                WebkitBackdropFilter: "blur(5px)",
+                backgroundColor: "rgba(23, 23, 23, 0.78)",
+                color: "rgb(214, 211, 209)",
+                backdropFilter: "blur(14px)",
+                WebkitBackdropFilter: "blur(14px)",
                 boxShadow:
                   "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)",
               }
             : {}
         }
       >
-        <ul className="flex justify-evenly max-w-5xl w-full text-[22px] text-pretty">
-          <li><a className="hover:text-zinc-100 transition-colors duration-300" href="#start">Start</a></li>
-          <li><a className="hover:text-zinc-100 transition-colors duration-300" href="#experience">Experience</a></li>
-          <li><a className="hover:text-zinc-100 transition-colors duration-300" href="#projects">Projects</a></li>
-          <li><a className="hover:text-zinc-100 transition-colors duration-300" href="#about">About</a></li>
-          <li><a className="hover:text-zinc-100 transition-colors duration-300" href="#skills">Skills</a></li>
+        <ul className="flex w-max min-w-full max-w-4xl items-center justify-center gap-5 whitespace-nowrap text-xs sm:justify-evenly sm:gap-8 sm:text-base">
+          <li><a className="transition-colors duration-300 hover:text-red-500" href="#start">Start</a></li>
+          <li><a className="transition-colors duration-300 hover:text-red-500" href="#experience">Experience</a></li>
+          <li><a className="transition-colors duration-300 hover:text-red-500" href="#projects">Projects</a></li>
+          <li><a className="transition-colors duration-300 hover:text-red-500" href="#about">About</a></li>
+          <li><a className="transition-colors duration-300 hover:text-red-500" href="#skills">Skills</a></li>
+          <li><a className="transition-colors duration-300 hover:text-red-500" href="mailto:matiasscontact@gmail.com">Contact</a></li>
         </ul>
-      </div>
-    </>
+      </nav>
   );
 };
 

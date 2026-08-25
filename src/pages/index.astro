@@ -2,223 +2,219 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Foto from "../img/photo.jpg";
-import Atalia from "../img/ataliaLogo.png";
-import { AtaliaMF } from "../components/ataliaFM";
-import Forest from "../components/bgForest";
-import Red from "../components/bgSport";
 import Chile from "../img/chilexd.png";
 import WorkoutSync from "../img/logoGrisNegro.jpg";
+import Forest from "../components/bgForest";
+import Red from "../components/bgSport";
 import { WorkoutsyncImg } from "../components/workoutsyncImg";
 import Skills from "../components/Skills";
 import SwitchTheme from "../components/switchTheme";
 import ExperienceTimeline from "../components/ExperienceTimeline";
 import AboutSection from "../components/AboutSection";
+
+const highlights = [
+  ["5+", "years building production software"],
+  ["10", "independently deployed Go services"],
+  ["700", "people supported by one platform"],
+  ["1,500+", "applicant submissions managed"],
+];
 ---
 
-<Layout title="Portfolio">
-  <section id="start" class="relative dark:text-white">
-    <div class="flex justify-center pt-12">
-      <div
-        class="flex justify-center items-center w-60 h-auto overflow-hidden rounded-full border-[2px] antialiased"
-      >
-        <a
-          href="https://www.linkedin.com/in/mat%C3%ADas-sep%C3%BAlveda-1914152a7/"
-        >
-          <Image src={Foto} loading="eager" alt="Foto de perfil" class="w-full h-auto" />
-        </a>
-      </div>
-      <Image
-        src={Chile}
-        alt="Country"
-        class="absolute w-10 h-auto top-[360px] sm:top-[360px] rounded-sm"
-      />
-    </div>
-    <div class="flex justify-center pt-28">
-      <h1
-        class="text-center text-2xl xl:text-4xl bg-gradient-to-r from-stone-400 via-stone-500 to-stone-400 bg-clip-text text-transparent"
-      >
-        Matías Sepúlveda
-      </h1>
-    </div>
-    <div class="flex justify-center pt-16">
-      <h1
-        class="text-center text-4xl md:text-7xl h-24 bg-gradient-to-r from-stone-400 via-stone-500 to-stone-400 bg-clip-text text-transparent"
-      >
-        Senior Software Engineer
-      </h1>
-    </div>
-    <div class="flex justify-center pt-16">
-      <h1
-        class="text-center text-xl xl:text-2xl px-5 sm:px-0 max-w-[560px] bg-gradient-to-r from-stone-400 via-stone-500 to-stone-400 bg-clip-text text-transparent text-pretty"
-      >
-        Designing cloud-native platforms & distributed systems for mission-critical environments.
-      </h1>
-    </div>
-    <div class="sm:flex pt-6">
-      <SwitchTheme client:load />
-    </div>
-    <div class="flex justify-center">
-      <div class="flex justify-around w-36 h-36">
-        <a
-          href="https://github.com/malygod"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex animate-pulse self-center"
-          aria-label="GitHub"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="transform dark:text-white h-10 w-auto hover:text-zinc-700 duration-150 ease-out hover:scale-125"
-            ><path
-              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-            ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
-          ></a
-        >
-      </div>
-    </div>
-  </section>
-  <h1
-    class="text-6xl text-center h-[24rem] py-24 animate-pulse bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-transparent"
-  >
-    Experience
-  </h1>
+<Layout title="Matías Sepúlveda — Software Engineer">
+  <main>
+    <section id="start" class="relative min-h-svh overflow-hidden px-5 pb-20 pt-12 dark:text-white sm:px-8 sm:pt-20">
+      <div class="mx-auto flex max-w-5xl flex-col items-center">
+        <div class="relative">
+          <a
+            href="https://www.linkedin.com/in/matias-sepulveda-illesca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Matías Sepúlveda on LinkedIn"
+            class="block h-44 w-44 overflow-hidden rounded-full border border-stone-400/70 shadow-2xl shadow-stone-900/10 transition duration-300 hover:scale-[1.02] sm:h-56 sm:w-56"
+          >
+            <Image src={Foto} loading="eager" alt="Matías Sepúlveda" class="h-full w-full object-cover" />
+          </a>
+          <Image
+            src={Chile}
+            alt="Chile"
+            class="absolute -bottom-3 left-1/2 w-11 -translate-x-1/2 rounded-sm border border-white/50 shadow-lg"
+          />
+        </div>
 
-  <div id="experience" class="hidden sm:flex">
-    <Forest />
-  </div>
+        <p class="mt-14 text-center text-sm uppercase tracking-[0.32em] text-stone-500 dark:text-stone-400 sm:text-base">
+          Matías Sepúlveda
+        </p>
+        <h1 class="mt-5 max-w-4xl bg-gradient-to-r from-stone-400 via-stone-600 to-stone-400 bg-clip-text text-center text-5xl font-medium leading-[0.95] tracking-tight text-transparent dark:via-stone-300 sm:text-7xl lg:text-8xl">
+          Software Engineer
+        </h1>
+        <p class="mt-7 text-center text-lg text-stone-600 dark:text-stone-300 sm:text-2xl">
+          Distributed Systems &amp; Platform Engineering
+        </p>
+        <p class="mt-5 max-w-2xl text-pretty text-center text-sm leading-7 text-stone-500 dark:text-stone-400 sm:text-base">
+          I build and operate cloud-native systems from architecture and infrastructure
+          through production—recently across Go, TypeScript, GCP, Terraform,
+          event-driven workflows, security, and applied AI.
+        </p>
 
-  <!-- Experience Timeline -->
-  <section class="relative z-10 bg-stone-100 dark:bg-neutral-950 py-16 sm:py-24">
-    <ExperienceTimeline client:load />
-  </section>
-
-  <div>
-    <Forest />
-  </div>
-
-  <!-- Atalia Project Showcase -->
-  <div
-    class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-stone-100 dark:bg-neutral-950"
-  >
-    <div
-      class="pt-5 justify-center xl:pt-32 w-full sm:w-full md:w-full lg:w-full xl:w-2/4"
-    >
-      <div class="hidden justify-center xl:block">
-        <div
-          class="flex justify-center items-center w-28 h-28 overflow-hidden rounded-full antialiased"
-        >
-          <a href="https://www.linkedin.com/in/matias-sepúlveda-1914152a7">
-            <Image
-              src={Atalia}
-              alt="Foto de perfil"
-              class="w-full h-auto rounded-full"
-            />
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a
+            href="https://www.linkedin.com/in/matias-sepulveda-illesca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full bg-stone-900 px-5 py-2.5 text-sm text-white transition hover:-translate-y-0.5 hover:bg-stone-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-600 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-white"
+          >
+            LinkedIn profile
+          </a>
+          <a
+            href="#projects"
+            class="rounded-full border border-stone-300 bg-white/40 px-5 py-2.5 text-sm text-stone-700 backdrop-blur transition hover:-translate-y-0.5 hover:border-stone-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-500 dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-stone-200"
+          >
+            View selected work
+          </a>
+          <a
+            href="mailto:matiasscontact@gmail.com"
+            class="rounded-full border border-stone-300 bg-white/40 px-5 py-2.5 text-sm text-stone-700 backdrop-blur transition hover:-translate-y-0.5 hover:border-stone-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-500 dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-stone-200"
+          >
+            Get in touch
           </a>
         </div>
-      </div>
-      <div class="py-5">
-        <h1
-          class="dark:text-white text-center xl:text-left text-3xl xl:text-4xl"
-        >
-          Atalia — Real Estate Platform
-        </h1>
-      </div>
-      <div class="w-full">
-        <p
-          class="px-[10%] lg:px-[20%] xl:px-0 dark:text-white text-center xl:text-left text-md xl:max-w-[500px]"
-        >
-          Designed, developed and implemented a web platform from zero for
-          Inmobiliaria Atalia Limitada (Sep 2021 – Mar 2023). Digitalized core
-          real estate operations with multiple functionalities for both staff
-          and clients, enhancing efficiency across the board.
-        </p>
-      </div>
-      <div></div>
-    </div>
-    <div class="w-full xl:flex z-0">
-      <AtaliaMF />
-    </div>
-  </div>
-  <div class="">
-    <Forest />
-  </div>
 
-  <h1
-    class="text-6xl text-center py-48 bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-transparent"
-  >
-    Projects
-  </h1>
-  <div id="projects" class="hidden sm:flex">
-    <Red />
-  </div>
-  <div
-    class="relative grid xl:flex xl:px-[5%] 2xl:px-[10%] z-10 bg-stone-100 dark:bg-neutral-950"
-  >
-    <div
-      class="pt-5 justify-center xl:pt-24 w-full sm:w-full md:w-full lg:w-full xl:w-2/4"
-    >
-      <div class="hidden justify-center xl:block">
-        <div
-          class="flex justify-center items-center w-28 h-auto overflow-hidden rounded-full border-2 border-white antialiased"
-        >
-          <a href="https://www.linkedin.com/in/matias-sepúlveda-1914152a7">
-            <Image
-              src={WorkoutSync}
-              alt="Foto de perfil"
-              class="w-full h-auto rounded-full"
-            />
-          </a>
+        <div class="mt-8">
+          <SwitchTheme client:load />
         </div>
-      </div>
-      <div class="py-5">
-        <h1
-          class="dark:text-white text-center xl:text-left text-3xl xl:text-4xl"
-        >
-          Workout Journey Project
-        </h1>
-      </div>
-      <div class="w-full">
-        <p
-          class="px-[10%] lg:px-[20%] xl:px-0 dark:text-white text-center xl:text-left text-md xl:max-w-[500px]"
-        >
-          This personal project aims to redefine the individual experience of
-          physical activity by providing streamlined access to initiate a
-          personal sports journey. The ultimate goal is to empower users with
-          tools to enhance their quality of life through their chosen physical
-          activity, fostering a positive and lasting impact on personal
-          well-being.
-        </p>
-      </div>
-    </div>
-    <div class="w-full xl:flex">
-      <WorkoutsyncImg />
-    </div>
-  </div>
-  <div class="z-0">
-    <Red />
-  </div>
 
-  <h1
-    class="text-6xl text-center py-48 bg-gradient-to-r from-stone-300 via-stone-400 to-stone-300 bg-clip-text text-transparent"
-  >
-    About
-  </h1>
-  <section id="about" class="relative bg-stone-100 dark:bg-neutral-950 pb-16">
-    <AboutSection client:load />
-  </section>
-  <h1
-    class="text-6xl text-center py-48 bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-transparent"
-  >
-    Skills
-  </h1>
-  <section id="skills" class="sm:flex justify-center bg-stone-100 dark:bg-neutral-950 overflow-hidden pb-20">
-    <Skills client:load />
-  </section>
+        <dl class="mt-14 grid w-full grid-cols-2 gap-px overflow-hidden rounded-2xl border border-stone-200/80 bg-stone-200/80 shadow-xl shadow-stone-900/5 dark:border-neutral-800 dark:bg-neutral-800 lg:grid-cols-4">
+          {highlights.map(([value, label]) => (
+            <div class="bg-stone-50/90 px-4 py-6 text-center dark:bg-neutral-900/90">
+              <dt class="text-2xl font-semibold text-stone-800 dark:text-stone-100 sm:text-3xl">{value}</dt>
+              <dd class="mt-1 text-xs leading-5 text-stone-500 dark:text-stone-400">{label}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <section id="experience" class="scroll-mt-20">
+      <div class="px-5 py-24 text-center sm:py-36">
+        <p class="text-xs uppercase tracking-[0.32em] text-stone-400">From full stack to platform ownership</p>
+        <h2 class="mt-4 bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-5xl text-transparent sm:text-6xl">
+          Experience
+        </h2>
+      </div>
+      <Forest />
+      <div class="relative z-10 bg-stone-100 py-16 dark:bg-neutral-950 sm:py-24">
+        <ExperienceTimeline client:load />
+      </div>
+      <Forest />
+    </section>
+
+    <section id="projects" class="scroll-mt-20">
+      <div class="px-5 py-24 text-center sm:py-36">
+        <p class="text-xs uppercase tracking-[0.32em] text-stone-400">Selected work</p>
+        <h2 class="mt-4 bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-5xl text-transparent sm:text-6xl">
+          Projects
+        </h2>
+      </div>
+      <Red />
+
+      <div class="bg-stone-100 px-5 py-20 dark:bg-neutral-950 sm:px-8 sm:py-28">
+        <article class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div>
+            <p class="text-xs uppercase tracking-[0.28em] text-red-700 dark:text-red-400">2026 · Applied AI engineering</p>
+            <h3 class="mt-4 text-3xl text-stone-900 dark:text-white sm:text-5xl">
+              AI Agent Observability &amp; Regression Tracker
+            </h3>
+            <p class="mt-6 max-w-xl text-sm leading-7 text-stone-600 dark:text-stone-400 sm:text-base">
+              A tool for ingesting agent traces, comparing performance across
+              versions, detecting regressions, and turning exception traces and
+              nested execution steps into focused diagnostic suggestions.
+            </p>
+            <ul class="mt-6 flex flex-wrap gap-2 text-xs text-stone-600 dark:text-stone-300">
+              {['Python', 'FastAPI', 'PostgreSQL', 'Next.js', 'OpenAI API', 'Docker'].map((item) => (
+                <li class="rounded-full border border-stone-300 px-3 py-1.5 dark:border-neutral-700">{item}</li>
+              ))}
+            </ul>
+            <div class="mt-7 flex flex-wrap gap-4 text-sm">
+              <a href="https://llm-powered-failure-analyzer.vercel.app" target="_blank" rel="noopener noreferrer" class="border-b border-red-700 pb-1 text-stone-800 transition hover:text-red-700 dark:border-red-400 dark:text-stone-200 dark:hover:text-red-300">
+                Open live project ↗
+              </a>
+              <a href="https://github.com/Malygod/LLM-Powered-Failure-Analyzer" target="_blank" rel="noopener noreferrer" class="border-b border-stone-400 pb-1 text-stone-600 transition hover:text-stone-900 dark:text-stone-400 dark:hover:text-white">
+                View source ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="relative min-h-80 overflow-hidden rounded-[2rem] border border-stone-300 bg-stone-950 p-8 shadow-2xl dark:border-neutral-800">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_15%,rgba(153,27,27,0.24),transparent_42%),radial-gradient(circle_at_80%_80%,rgba(20,83,45,0.24),transparent_35%)]"></div>
+            <div class="relative flex h-full min-h-64 flex-col justify-between font-mono text-xs text-stone-400">
+              <div class="flex items-center justify-between border-b border-neutral-800 pb-4">
+                <span>agent/version-04</span><span class="text-emerald-400">trace received</span>
+              </div>
+              <div class="space-y-4 py-8">
+                <div class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-stone-500"></span><span>normalize input · sha-256</span></div>
+                <div class="ml-8 h-9 border-l border-dashed border-neutral-700"></div>
+                <div class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-red-500"></span><span>regression detected · latency +18%</span></div>
+                <div class="ml-8 h-9 border-l border-dashed border-neutral-700"></div>
+                <div class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-emerald-500"></span><span>diagnostic ready · probable cause isolated</span></div>
+              </div>
+              <div class="border-t border-neutral-800 pt-4 text-stone-500">compare → explain → fix</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="bg-stone-100 px-5 pb-20 dark:bg-neutral-950 sm:px-8 sm:pb-28">
+        <article class="mx-auto grid max-w-5xl gap-10 border-t border-stone-300 pt-20 dark:border-neutral-800 lg:grid-cols-2 lg:items-center">
+          <div class="order-2 lg:order-1">
+            <WorkoutsyncImg />
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="flex items-center gap-4">
+              <div class="h-16 w-16 overflow-hidden rounded-full border border-stone-300 dark:border-neutral-700">
+                <Image src={WorkoutSync} alt="WorkoutSync logo" class="h-full w-full object-cover" />
+              </div>
+              <p class="text-xs uppercase tracking-[0.28em] text-stone-500">Product &amp; mobile prototype</p>
+            </div>
+            <h3 class="mt-5 text-3xl text-stone-900 dark:text-white sm:text-5xl">WorkoutSync</h3>
+            <p class="mt-6 max-w-xl text-sm leading-7 text-stone-600 dark:text-stone-400 sm:text-base">
+              A React Native product concept designed to reduce the friction
+              between wanting to be active and joining a real-world activity.
+              It helps people discover locations, communities, and events that
+              match their interests and capabilities.
+            </p>
+            <p class="mt-5 text-xs uppercase tracking-[0.2em] text-stone-400">React Native · Product design · Social activity platform</p>
+            <a href="https://github.com/Malygod/workoutsync" target="_blank" rel="noopener noreferrer" class="mt-7 inline-block border-b border-stone-400 pb-1 text-sm text-stone-700 transition hover:text-stone-950 dark:text-stone-300 dark:hover:text-white">
+              View source ↗
+            </a>
+          </div>
+        </article>
+      </div>
+      <Red />
+    </section>
+
+    <section id="about" class="scroll-mt-20 bg-stone-100 px-5 pb-20 pt-24 dark:bg-neutral-950 sm:pt-36">
+      <div class="mb-16 text-center">
+        <p class="text-xs uppercase tracking-[0.32em] text-stone-400">How I work</p>
+        <h2 class="mt-4 bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-5xl text-transparent sm:text-6xl">About</h2>
+      </div>
+      <AboutSection client:load />
+    </section>
+
+    <section id="skills" class="scroll-mt-20 overflow-hidden bg-stone-100 px-5 pb-24 pt-20 dark:bg-neutral-950 sm:pt-28">
+      <div class="mb-16 text-center">
+        <p class="text-xs uppercase tracking-[0.32em] text-stone-400">Tools chosen for the problem</p>
+        <h2 class="mt-4 bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 bg-clip-text text-5xl text-transparent sm:text-6xl">Skills</h2>
+      </div>
+      <Skills client:load />
+    </section>
+  </main>
+
+  <footer class="border-t border-stone-200 bg-stone-100 px-5 py-10 text-center text-sm text-stone-500 dark:border-neutral-800 dark:bg-neutral-950 dark:text-stone-400">
+    <p>Built by hand with Astro, React, and a preference for systems that stay understandable.</p>
+    <div class="mt-4 flex justify-center gap-5">
+      <a href="mailto:matiasscontact@gmail.com" class="hover:text-stone-900 dark:hover:text-white">Email</a>
+      <a href="https://www.linkedin.com/in/matias-sepulveda-illesca/" target="_blank" rel="noopener noreferrer" class="hover:text-stone-900 dark:hover:text-white">LinkedIn</a>
+      <a href="https://github.com/Malygod" target="_blank" rel="noopener noreferrer" class="hover:text-stone-900 dark:hover:text-white">GitHub</a>
+    </div>
+  </footer>
 </Layout>

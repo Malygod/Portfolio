@@ -12,16 +12,15 @@ const AboutSection = () => {
             Professional Summary
           </h3>
           <p className="text-sm sm:text-base text-stone-600 dark:text-stone-400 leading-relaxed">
-            Software engineer with experience designing and delivering
-            cloud-native platforms across industrial, financial, and real-estate
-            environments. Strong background in platform architecture,
-            microservices, infrastructure as code, backend development, and
-            cross-functional stakeholder management. Currently owning a
-            multilingual internal platform for a multinational infrastructure
-            project, translating business needs from Chinese leadership and
-            Chilean department managers into scalable systems, workflows, and
-            reliable operations. Open to relocation to the US, Canada, Ireland,
-            or New Zealand (available for On-site, Hybrid, or Remote setups).
+            Software engineer with 5+ years of professional experience,
+            progressing from full-stack applications to distributed backend
+            systems and cloud-native platform engineering. I work across the
+            complete production lifecycle—from architecture and
+            Terraform-managed infrastructure through implementation,
+            deployment, and operation. My recent focus is Go, TypeScript, GCP,
+            event-driven architecture, security, and AI-enabled workflows,
+            translating business requirements into pragmatic systems that are
+            maintainable in the real world.
           </p>
         </div>
       </div>
@@ -47,22 +46,22 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Certifications */}
+        {/* Languages & Mobility */}
         <div className="group relative">
           <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-amber-300 to-orange-400 opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-500" />
           <div className="relative bg-white/60 dark:bg-neutral-900/80 backdrop-blur-sm rounded-xl border border-stone-200/50 dark:border-neutral-800/50 p-6 transition-all duration-300 group-hover:border-stone-300 dark:group-hover:border-neutral-700 group-hover:shadow-xl h-full">
             <h3 className="text-lg font-semibold text-stone-800 dark:text-stone-100 mb-3 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-gradient-to-br from-amber-400 to-orange-600" />
-              Certifications & Development
+              Languages & Mobility
             </h3>
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-sm text-stone-600 dark:text-stone-400">
                 <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-br from-amber-400 to-orange-600" />
-                Preparing for Google Cloud Professional Cloud Architect certification
+                Spanish — Native · English — Advanced
               </li>
               <li className="flex items-start gap-2 text-sm text-stone-600 dark:text-stone-400">
                 <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-br from-amber-400 to-orange-600" />
-                Continuing to deepen cloud architecture, reliability, and system design skills
+                Based in Chile · Open to relocation to the United States, Canada, Ireland, and Switzerland
               </li>
             </ul>
           </div>
@@ -79,13 +78,13 @@ const AboutSection = () => {
           </h3>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Architectural Design (Component, Deployment, Data Flow)",
-              "Event-Driven Architecture (EDA, Pub/Sub, Async Processing)",
-              "Resilience & Scalability (Retry, Backoff, Idempotency, Circuit Breaker)",
-              "Security & Access Control (JWT, RBAC, Secret Management)",
-              "Infrastructure as Code (Terraform, Automated CI/CD, Docker)",
-              "Microservices & Service-Based Architecture",
-              "AI Agent Integration (Goa-AI, LLM APIs, Qwen)",
+              "Distributed services and event-driven architecture",
+              "Asynchronous processing, idempotency, retry, and backoff",
+              "JWT RS256, RBAC, IAM, and service-to-service authentication",
+              "Infrastructure as Code with Terraform and automated CI/CD",
+              "ADRs, system design, and component/deployment/data-flow diagrams",
+              "BFF/API aggregation and production observability",
+              "Applied AI with Vertex AI, Gemini, Qwen, RAG, and provider fallbacks",
             ].map((practice, index) => (
               <div
                 key={index}
@@ -112,7 +111,7 @@ const AboutSection = () => {
           matiasscontact@gmail.com
         </a>
         <a
-          href="https://www.linkedin.com/in/mat%C3%ADas-sep%C3%BAlveda-1914152a7/"
+          href="https://www.linkedin.com/in/matias-sepulveda-illesca/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-neutral-900/80 border border-stone-200/50 dark:border-neutral-800/50 text-sm text-stone-600 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 hover:border-stone-300 dark:hover:border-neutral-700 hover:shadow-lg transition-all duration-300"

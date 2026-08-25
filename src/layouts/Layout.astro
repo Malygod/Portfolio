@@ -2,10 +2,12 @@
 import Nav from "../components/Nav.tsx";
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
-const { title} = Astro.props;
+const {
+  title = "Matías Sepúlveda — Software Engineer",
+} = Astro.props;
 
 ---
 
@@ -13,16 +15,23 @@ const { title} = Astro.props;
 <html lang="en" id="root" class="light">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Matías Sepúlveda — Senior Software Engineer specializing in cloud-native platforms, Go (Golang), Next.js, GCP infrastructure, and distributed systems. Open to relocation to the US, Canada, Ireland, and New Zealand." />
-    <meta name="keywords" content="Senior Software Engineer, Tech Lead, Go, Golang, Next.js, React, GCP, Google Cloud, Terraform, Microservices, Cloud Architecture, Full Stack" />
+    <meta name="description" content="Matías Sepúlveda is a software engineer focused on distributed systems, platform engineering, Go, TypeScript, GCP, Terraform, security, and applied AI." />
+    <meta name="keywords" content="Software Engineer, Platform Engineering, Distributed Systems, Go, TypeScript, Next.js, GCP, Terraform, Event-Driven Architecture, Applied AI" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+    <meta name="theme-color" content="#171717" />
     <meta name="generator" content={Astro.generator} />
-    <title>Matías Sepúlveda — Senior Software Engineer</title>
+    <link rel="canonical" href="https://malygod.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://malygod.netlify.app/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Distributed systems, platform engineering, and cloud-native delivery—from architecture to production." />
+    <meta property="og:image" content="https://malygod.netlify.app/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content="Distributed systems, platform engineering, and cloud-native delivery—from architecture to production." />
+    <meta name="twitter:image" content="https://malygod.netlify.app/og.png" />
+    <title>{title}</title>
   </head>
   <body class="bg-stone-100 dark:bg-neutral-950">
     <div
@@ -37,6 +46,12 @@ const { title} = Astro.props;
 <style is:global>
   html {
     font-family: system-ui, "Segoe UI";
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    margin: 0;
+    overflow-x: hidden;
   }
   code {
     font-family:
@@ -73,6 +88,19 @@ const { title} = Astro.props;
   * {
     scrollbar-width: thin; /* Ancho del scrollbar */
     scrollbar-color: rgb(255, 255, 255) black; /* Color del pulgar y la pista del scrollbar */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
   /* animation slide up */
