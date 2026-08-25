@@ -39,7 +39,7 @@ const Navbar = () => {
           <li><a className="transition-colors duration-300 hover:text-red-500" href="#projects">Projects</a></li>
           <li><a className="transition-colors duration-300 hover:text-red-500" href="#about">About</a></li>
           <li><a className="transition-colors duration-300 hover:text-red-500" href="#skills">Skills</a></li>
-          <li><a className="transition-colors duration-300 hover:text-red-500" href="mailto:matiasscontact@gmail.com">Contact</a></li>
+          <li><a className="transition-colors duration-300 hover:text-red-500" href="/resume.pdf" download="Resume_Matias_Sepulveda.pdf">Résumé</a></li>
         </ul>
       </nav>
   );

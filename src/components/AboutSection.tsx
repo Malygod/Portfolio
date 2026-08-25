@@ -135,6 +135,18 @@ const AboutSection = () => {
           </svg>
           GitHub
         </a>
+        <a
+          href="/resume.pdf"
+          download="Resume_Matias_Sepulveda.pdf"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-neutral-900/80 border border-stone-200/50 dark:border-neutral-800/50 text-sm text-stone-600 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 hover:border-stone-300 dark:hover:border-neutral-700 hover:shadow-lg transition-all duration-300"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 3v12" />
+            <path d="m7 10 5 5 5-5" />
+            <path d="M5 21h14" />
+          </svg>
+          Résumé
+        </a>
       </div>
     </div>
   );
